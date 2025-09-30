@@ -14,8 +14,8 @@ Complemento o fondo secundario: #92B3D2
 :root {
     --blanco-primario: #f4f0e3;
     --blanco-secundario: #ECECE5;
-    --azul-oscuro: #13233D;
-    --azul-medio: #3A4F99;
+    --azul-oscuro: #232945;
+    --azul-medio: #92B3D2;
     --verde-lima: #D1D871;
 }
 *{
@@ -23,13 +23,31 @@ Complemento o fondo secundario: #92B3D2
     padding: 0;
     box-sizing: border-box;
     font-family: oswald, sans-serif;
-    background-color: #f4f0e3;
-    color: #232945
+    background-color: var(--blanco-primario);
+    color: var(--azul-oscuro);
 }
 
 p,li,input{
     font-family: montserrat, sans-serif;
-    color: #f4f0e3;
+    color: var(--blanco-primario);
+}
+
+header{
+    width:100%;
+    height:15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+article{
+background: #F4F0E3;
+background: linear-gradient(0deg, rgba(244, 240, 227, 1) 0%, rgba(199, 195, 175, 1) 100%);
+margin-top: 15vh;
 }
 
 /*Moviles*/
