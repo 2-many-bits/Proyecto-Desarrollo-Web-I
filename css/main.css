@@ -11,6 +11,13 @@ Acentos: #C6E369
 Complemento o fondo secundario: #92B3D2
 */
 
+:root {
+    --blanco-primario: #f4f0e3;
+    --blanco-secundario: #ECECE5;
+    --azul-oscuro: #13233D;
+    --azul-medio: #3A4F99;
+    --verde-lima: #D1D871;
+}
 *{
     margin: 0;
     padding: 0;

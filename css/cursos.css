@@ -3,13 +3,7 @@
 @import url("../css/menu.css");
 
 /* Declaración de variables para modularidad */
-:root {
-    --blanco-primario: #f4f0e3;
-    --blanco-secundario: #ECECE5;
-    --azul-oscuro: #13233D;
-    --azul-medio: #3A4F99;
-    --verde-lima: #D1D871;
-}
+
 
 /* COMIENZA TEMPORAL: Cuando los estilos del menú estén completos esto se eliminará */
 header {
