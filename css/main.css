@@ -3,20 +3,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-
-/*Colores extraídos de la img generada:
-fondo principal: #F4F0E3
-Letra principal: #232945
-Acentos: #C6E369
-Complemento o fondo secundario: #92B3D2
-*/
-
 :root {
     --blanco-primario: #f4f0e3;
     --blanco-secundario: #ECECE5;
     --azul-oscuro: #232945;
     --azul-medio: #92B3D2;
-    --verde-lima: #D1D871;
+    --verde-lima-encendido: #c6e369;
+    --verde-lima: #d1d871;
     --gris-fondos: #C7C3AF;
 }
 *{
@@ -50,7 +43,7 @@ article{
 margin-top: 15vh;
 padding: 100px;
 background: #F4F0E3;
-background: linear-gradient(0deg, rgba(244, 240, 227, 1) 0%, rgba(199, 195, 175, 1) 100%);
+background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175, 1) 100%);
 }
 
 /*Moviles*/

@@ -38,22 +38,32 @@ a{
     color: var(--azul-oscuro);
 }
 
-nav ul li, nav ul a{
+nav ul a{
     background: var(--verde-lima);
-    padding: 1% 0.5vw;
+    padding: 1% 1vw;
     border-radius: 30px;
-    font-size: 1.5vw;
+    font-size: 16px;
+    transition: all 0.3s ease;
     
 }
 
-nav ul li:nth-child(6){
+nav ul a:hover{
+    padding: 2% 0.5vw;
+    color: #20348d;
+}
+
+nav ul a:nth-child(6){
     background: var(--blanco-primario);
     border-left: solid 2px var(--gris-fondos);
     border-radius: 0;
-
+    transition: all 0.3s ease;
 }
 
-nav ul li:nth-child(6) a{
-    background: var(--blanco-primario);
-    
+nav ul a:hover{
+    padding: 2% 1vw;
+    color: #20348d;
 }
+
+
+
+
