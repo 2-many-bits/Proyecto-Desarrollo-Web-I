@@ -1,0 +1,353 @@
+/* Importación de los estilos generales */
+@import url("../css/main.css");
+@import url("../css/menu.css");
+
+/* Declaración de variables para modularidad */
+:root {
+    --blanco-primario: #F4F0E3;
+    --azul-oscuro: #232945;
+    --verde-lima: #C6E369;
+    --azul-medio: #92B3D2;
+}
+
+/* COMIENZA TEMPORAL: Cuando los estilos del menú estén completos esto se eliminará */
+header {
+    background-color: var(--blanco-secundario);
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    left: -25%;
+}
+
+header p {
+    color: var(--azul-oscuro)
+}
+
+header img {
+    width: 25px;
+}
+
+/* CONTENIDO: Contenedor principal con las secciones y el pie de página*/
+main p {
+    color: var(--azul-medio);
+}
+
+/* QUITA ESTILOS A LOS ENLACES */
+a:active {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* PRESENTACIÓN: Contiene el mensaje clave de la empresa*/
+#presentacion {
+    width: 100vw;
+    height: 28vh;
+    padding: 5% 1%;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 2)), url("../img/presentacion.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#presentacion h1 {
+    width: 50%;
+    background: none;
+    color: var(--azul-oscuro);
+    text-align: right;
+    font-size: 30px;
+    margin-left: 45%;
+    margin-top: 5%;
+    line-height: 1.2;
+
+}
+
+#origen {
+    width: 100vw;
+    padding: 5%;
+}
+
+#origen h1 {
+    text-align: center;
+}
+
+#origen p {
+    color: var(--azul-oscuro);
+    padding: 5%;
+}
+
+/* VISION-MISION: Contiene la visión y la misión */
+#vision-mision {
+    width: 80vw;
+    padding: 5% 5% 10% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+#vision-mision article {
+    background-color: var(--verde-lima);
+    border-radius: 10px;
+    width: 95%;
+    justify-content: space-between;
+    height: auto;
+    box-shadow: 1px 5px 8px 0px rgba(11, 50, 94, 0.5), 0px 6px 39px 1px rgba(0, 0, 0, 0.1);
+}
+
+#vision-mision article:hover {
+    transform: scale(1.06);
+
+
+}
+
+#vision-mision p {
+    background: none;
+    color: var(--azul-oscuro);
+    padding: 5%;
+
+}
+
+#vision-mision h2 {
+    padding-left: 20px;
+}
+
+/* EQUIPO: mosaico con la información e imagenes del equipo Nort3 */
+#equipo {
+    padding: 0px 0px 20px 0px;
+
+}
+
+#mosaico {
+    background-color: var(--azul-medio);
+    padding-bottom: 50px;
+
+
+}
+
+/* para que los hijos no cubran el fondo azul */
+#mosaico h1,
+#mosaico article,
+#mosaico div,
+#mosaico h3,
+#mosaico a,
+#vision-mision h2 {
+    background-color: transparent;
+}
+
+#mosaico div a {
+    text-decoration: none;
+}
+
+#mosaico-izquierda {
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #232945;
+}
+
+#mosaico-derecha {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 6px;
+    gap: 5px;
+    justify-content: space-evenly;
+}
+
+.imagen-letra img {
+    max-height: 150px;
+    transition: transform 0.2s ease;
+}
+
+#mosaico-derecha img:hover {
+    transform: scale(1.05)
+}
+
+#informacion-mosaico {
+    padding: 5%;
+    text-align: center;
+}
+
+#informacion-mosaico p {
+    color: var(--azul-oscuro);
+    padding: 20px 0px 10px 0px;
+    text-align: left;
+}
+
+#informacion-mosaico p::first-letter {
+    font-weight: bolder;
+}
+
+/* FOOTER COMUN */
+footer {
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul-oscuro);
+    color: var(--blanco-primario);
+    font-size: 20px;
+}
+
+/* TABLETS */
+@media screen and (min-width:481px) and (max-width:768px) {
+
+    /* Opcional: ligeros ajustes si notas problemas en tablets */
+    #presentacion h1 {
+        font-size: 25px;
+        margin-top: 7%;
+        /* Fuente intermedia */
+    }
+
+    #vision-mision article {
+        width: 45%;
+        height: auto;
+        min-height: 300px;
+        /* Ancho ligeramente menor */
+    }
+
+    #vision-mision {
+        padding: 0px 10px 50px 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+        justify-content: space-evenly;
+
+    }
+
+    #vision-mision article:hover {
+        transform: scale(1.05);
+        /* Ancho ligeramente menor */
+    }
+
+}
+
+/* COMPUTADORAS */
+@media screen and (min-width:769px) {
+    #presentacion {
+        height: 35vh;
+        padding: 3% 5%;
+
+    }
+
+    #presentacion h1 {
+        font-size: 40px;
+        width: 45%;
+        margin-left: 50%;
+        margin-top: 2%;
+    }
+
+    #origen {
+        padding: 3% 5%;
+    }
+
+    #origen h1 {
+        font-size: 32px;
+    }
+
+    #origen p {
+        margin: 0 auto;
+        width: 80%;
+        font-size: 18px;
+    }
+
+    #vision-mision {
+        padding: 0% 4% 5% 4%;
+        height: auto;
+        gap: 30px;
+        flex-direction: row;
+    }
+
+    #vision-mision article {
+        width: 80%;
+        height: 40%;
+        min-height: 200px;
+    }
+
+    #vision-mision h2 {
+        font-size: 24px;
+    }
+
+    #vision-mision p {
+        font-size: 16px;
+    }
+
+    #mosaico {
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+    }
+
+    #mosaico-izquierda {
+        border-bottom: 0px;
+        border-right: 2px solid #232945;
+        color: var(--blanco-primario);
+        position: relative;
+        width: 6%;
+        width: 60px;
+
+    }
+
+    #mosaico-izquierda h1 {
+        font-size: 28px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-270deg);
+        transform-origin: center;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    #mosaico-derecha {
+        gap: 60px;
+        align-items: center;
+        
+    }
+
+    .imagen-letra img {
+        max-height: 180px;
+    }
+
+    #informacion-mosaico p {
+        font-size: 18px;
+    }
+
+    #mosaico-derecha img:hover {
+    transform: scale(1.25)
+}
+    #informacion-mosaico {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* CELULARES */
+@media screen and (max-width:480px) {
+
+    #presentacion {
+        height: 40vh;
+        padding: 3% 2%;
+    }
+
+
+    #vision-mision {
+        padding: 3% 3% 5% 3%;
+        height: auto;
+        gap: 25px;
+    }
+
+    #vision-mision article {
+        width: 90%;
+        min-height: 49%;
+        height: auto;
+        padding: 3%;
+    }
+
+
+}}
