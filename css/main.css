@@ -45,7 +45,9 @@ footer{
     background-color: var(--azul-oscuro);
     padding: 1.5vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2vw;
     justify-content: space-evenly;
     align-items: center;
 }
