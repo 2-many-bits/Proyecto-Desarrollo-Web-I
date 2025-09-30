@@ -17,6 +17,7 @@ Complemento o fondo secundario: #92B3D2
     --azul-oscuro: #232945;
     --azul-medio: #92B3D2;
     --verde-lima: #D1D871;
+    --gris-fondos: #C7C3AF;
 }
 *{
     margin: 0;
@@ -42,12 +43,14 @@ header{
     position: fixed;
     top: 0;
     z-index: 100;
+    border-bottom: solid 2px var(--gris-fondos);
 }
 
 article{
+margin-top: 15vh;
+padding: 100px;
 background: #F4F0E3;
 background: linear-gradient(0deg, rgba(244, 240, 227, 1) 0%, rgba(199, 195, 175, 1) 100%);
-margin-top: 15vh;
 }
 
 /*Moviles*/

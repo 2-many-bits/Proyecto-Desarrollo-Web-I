@@ -18,15 +18,16 @@ header > a{
 }
 
 nav {
-    width: 70%;
+    width: 75%;
 }
 
 
 nav ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     list-style: none;
     align-items: center;
+    gap: 1%;
     
 }
 
@@ -39,12 +40,20 @@ a{
 
 nav ul li, nav ul a{
     background: var(--verde-lima);
-    padding: 4px;
-    border-radius: 5px;
+    padding: 1% 0.5vw;
+    border-radius: 30px;
+    font-size: 1.5vw;
     
 }
 
-nav ul li:nth-child(6), nav ul li:nth-child(6) a{
+nav ul li:nth-child(6){
     background: var(--blanco-primario);
+    border-left: solid 2px var(--gris-fondos);
+    border-radius: 0;
+
 }
 
+nav ul li:nth-child(6) a{
+    background: var(--blanco-primario);
+    
+}
