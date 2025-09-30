@@ -49,7 +49,7 @@ nav ul a{
 
 nav ul a:hover{
     padding: 2% 0.5vw;
-    color: #20348d;
+    color: var(--azul-encendido);
 }
 
 nav ul a:nth-child(6){
@@ -61,7 +61,7 @@ nav ul a:nth-child(6){
 
 nav ul a:hover{
     padding: 2% 1vw;
-    color: #20348d;
+    color: var(--azul-encendido);
 }
 
 
