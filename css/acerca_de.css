@@ -1,33 +1,13 @@
 /* Importación de los estilos generales */
-@import url("../css/main.css");
 @import url("../css/menu.css");
-
-/* Declaración de variables para modularidad */
-:root {
-    --blanco-primario: #F4F0E3;
-    --azul-oscuro: #232945;
-    --verde-lima: #C6E369;
-    --azul-medio: #92B3D2;
-}
-
-/* COMIENZA TEMPORAL: Cuando los estilos del menú estén completos esto se eliminará */
-header {
-    background-color: var(--blanco-secundario);
-    width: 25%;
-    height: 100%;
-    position: fixed;
-    left: -25%;
-}
-
-header p {
-    color: var(--azul-oscuro)
-}
-
-header img {
-    width: 25px;
-}
+@import url("../css/main.css");
 
 /* CONTENIDO: Contenedor principal con las secciones y el pie de página*/
+main {
+    position: relative;
+    top: 15vh ;
+}
+
 main p {
     color: var(--azul-medio);
 }
@@ -73,28 +53,34 @@ a:active {
 
 #origen p {
     color: var(--azul-oscuro);
-    padding: 5%;
+    padding: 40px;
+    border-top: 1px solid var(--azul-medio);
 }
 
 /* VISION-MISION: Contiene la visión y la misión */
 #vision-mision {
     width: 80vw;
-    padding: 5% 5% 10% 5%;
+    padding: 2% 5% 10% 5%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     height: auto;
     gap: 20px;
     margin: 0 auto;
 }
 
 #vision-mision article {
+    margin-top: 0;
+    padding: 0;
+    background: none;
     background-color: var(--verde-lima);
     border-radius: 10px;
     width: 95%;
     justify-content: space-between;
     height: auto;
+    flex: 1;
+    overflow: auto;
     box-shadow: 1px 5px 8px 0px rgba(11, 50, 94, 0.5), 0px 6px 39px 1px rgba(0, 0, 0, 0.1);
+    
 }
 
 #vision-mision article:hover {
@@ -114,10 +100,26 @@ a:active {
     padding-left: 20px;
 }
 
+#vision-mision img {
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 10px;
+   
+}
+
 /* EQUIPO: mosaico con la información e imagenes del equipo Nort3 */
 #equipo {
     padding: 0px 0px 20px 0px;
 
+}
+
+#equipo h1 {
+    border-bottom: 1px solid var(--azul-medio);
+    
 }
 
 #mosaico {
@@ -127,14 +129,17 @@ a:active {
 
 }
 
-/* para que los hijos no cubran el fondo azul */
 #mosaico h1,
 #mosaico article,
 #mosaico div,
 #mosaico h3,
 #mosaico a,
 #vision-mision h2 {
+    margin-top: 0;
+    padding: 5px 0px 0px 0px;
+    background: none;
     background-color: transparent;
+    text-align: center;
 }
 
 #mosaico div a {
@@ -158,7 +163,7 @@ a:active {
 
 .imagen-letra img {
     max-height: 150px;
-    transition: transform 0.2s ease;
+    transition: transform 0.5s ease;
 }
 
 #mosaico-derecha img:hover {
@@ -180,33 +185,21 @@ a:active {
     font-weight: bolder;
 }
 
-/* FOOTER COMUN */
-footer {
-    height: 8vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--azul-oscuro);
-    color: var(--blanco-primario);
-    font-size: 20px;
-}
 
 /* TABLETS */
 @media screen and (min-width:481px) and (max-width:768px) {
 
-    /* Opcional: ligeros ajustes si notas problemas en tablets */
     #presentacion h1 {
         font-size: 25px;
         margin-top: 7%;
-        /* Fuente intermedia */
+        
     }
 
     #vision-mision article {
         width: 45%;
         height: auto;
         min-height: 300px;
-        /* Ancho ligeramente menor */
+    
     }
 
     #vision-mision {
@@ -221,7 +214,7 @@ footer {
 
     #vision-mision article:hover {
         transform: scale(1.05);
-        /* Ancho ligeramente menor */
+       
     }
 
 }
@@ -331,10 +324,9 @@ footer {
 @media screen and (max-width:480px) {
 
     #presentacion {
-        height: 40vh;
+        height: 20vh;
         padding: 3% 2%;
     }
-
 
     #vision-mision {
         padding: 3% 3% 5% 3%;
@@ -348,6 +340,5 @@ footer {
         height: auto;
         padding: 3%;
     }
-
 
 }}
