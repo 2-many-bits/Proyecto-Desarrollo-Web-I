@@ -1,0 +1,72 @@
+/* 1. Estilos base para móviles (menos de 576px) */
+.container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap-reverse;
+}
+
+article.course-main-info{
+    padding: 5%;
+    margin: 0 auto;
+}
+
+p.course-description{
+    color: var(--azul-oscuro);
+}
+
+section.what-you-will-learn li{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+section.what-you-will-learn li svg{
+    width: 25px;
+    height: auto;
+    margin-right: 4px;
+}
+
+aside{
+    margin-top: 15vh;
+    padding: 5%;
+    width: 100%;
+}
+
+aside li{
+    color: var(--azul-oscuro);
+    margin-left: 5%;
+}
+
+aside div.instructor-details{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+aside div.instructor-details p{
+    color: var(--azul-oscuro);
+
+}
+
+section.prerequisites li{
+    color: var(--azul-oscuro);
+    margin-left: 5%;
+}
+
+details.accordion-item li{
+    color: var(--azul-oscuro);
+    margin-left: 5%;
+}
+
+/* 2. Estilos para móviles grandes y superiores */
+@media (min-width: 576px) {
+    .contenedor {
+        padding: 10px;
+    }
+}
+
+/* 3. Estilos para tabletas y superiores */
+@media (min-width: 768px) {
+    .contenedor {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+}
