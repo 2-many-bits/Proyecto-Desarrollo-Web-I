@@ -1,0 +1,20 @@
+/* Importación de los estilos generales */
+@import url("../css/menu.css");
+@import url("../css/main.css");
+
+/* CONTENIDO: Contenedor principal con las secciones y el pie de página*/
+main {
+    position: relative;
+    top: 15vh ;
+}
+
+main p {
+    color: var(--azul-medio);
+}
+
+/* QUITA ESTILOS A LOS ENLACES */
+a:active {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
