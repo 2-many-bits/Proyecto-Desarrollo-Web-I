@@ -20,11 +20,10 @@ main {
     padding: 20px 0px;
 }
 
-#perfil-movil img,
-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+#perfil-movil img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
     display: block;
     margin: 0 auto;
 
@@ -37,12 +36,14 @@ img {
     background: none;
     background-color: transparent;
     border-radius: 10px;
-    border: 2px solid var(--gris-fondos) ;
+    border: 2px solid var(--gris-fondos);
+    
 }
 
 #informacion-principal article h1 {
     padding-bottom: 20px;
     font-size: 1.5em;
+
 }
 
 /* Estilo herdedado que se buscan personalziar */
@@ -50,33 +51,54 @@ img {
     background-color: transparent;
 }
 
-/* DATOS DE SECCION */
-.tabla .fila {
+/* DATOS EN FILA DE CADA SECCIÓN DE INFORMACIÓN */
+
+.fila {
     margin: 10px 0px;
     padding: 15px;
     background-color: white;
-
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
-.tabla .fila:first-of-type {
-    border-radius: 20px 20px 0px 0px;
+.fila i{
+    color: var(--verde-lima);
+    background-color: transparent;
+    font-size: 2.5em;
+    align-content: center;
 }
 
-.tabla .fila:last-of-type {
-    border-radius: 0px 0px 20px 20px;
+.fila .campo {
+    background-color: transparent;
+    word-break: break-word;
 }
 
-.tabla .fila:hover{
-    background-color: var(--gris-fondos);
-}
-.tabla .fila:hover h3, .tabla .fila:hover h5 {
+.fila h3 {
     color: var(--azul-encendido);
 }
 
-/* DIPLOMAS */
-#diplomas .tabla .fila {
-    border-radius: 20px;
+.fila:first-of-type {
+    border-radius: 20px 20px 0px 0px;
 }
+
+.fila:last-of-type {
+    border-radius: 0px 0px 20px 20px;
+}
+
+.fila:hover{
+    background-color: var(--gris-fondos);
+}
+
+
+/* DIPLOMAS */
+#diplomas .fila {
+    border-radius: 20px;
+    text-align: center;
+    display: block;
+}
+
+
 
 #diplomas img {
     width: 150px;
