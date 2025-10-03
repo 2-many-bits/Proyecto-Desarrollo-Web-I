@@ -28,16 +28,17 @@ main {
     margin: 0 auto;
 
 }
+
 /* SECCIONES DE INFORMACIÓN */
 #informacion-principal article {
     width: 90%;
-    padding: 30px 20px ;
+    padding: 30px 20px;
     margin: 20px auto;
     background: none;
     background-color: transparent;
     border-radius: 10px;
     border: 2px solid var(--gris-fondos);
-    
+
 }
 
 #informacion-principal article h1 {
@@ -47,7 +48,10 @@ main {
 }
 
 /* Estilo herdedado que se buscan personalziar */
-#informacion-principal h1, h3, h5, h4 {
+#informacion-principal h1,
+h3,
+h5,
+h4 {
     background-color: transparent;
 }
 
@@ -62,7 +66,7 @@ main {
     gap: 20px;
 }
 
-.fila i{
+.fila i {
     color: var(--verde-lima);
     background-color: transparent;
     font-size: 2.5em;
@@ -86,7 +90,7 @@ main {
     border-radius: 0px 0px 20px 20px;
 }
 
-.fila:hover{
+.fila:hover {
     background-color: var(--gris-fondos);
 }
 
@@ -97,8 +101,6 @@ main {
     text-align: center;
     display: block;
 }
-
-
 
 #diplomas img {
     width: 150px;
@@ -112,7 +114,104 @@ main {
 }
 
 /*Tablets*/
-@media screen and (min-width: 481px) and (max-width: 768px) {}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+
+    #diplomas .fila {
+        display: flex;
+        align-items: center;
+    }
+}
 
 /*PC*/
-@media screen and (min-width: 769px) {}
+@media screen and (min-width: 769px) {
+
+    #perfil-movil {
+        display: none;
+    }
+    /* Ajusta el scroll al espacio del menu superior*/
+    main   {
+        top: 17vh;
+    }
+
+    html {
+    scroll-padding-top: 16vh; 
+}
+
+    /* CONTENIDO: contiene a la barra lateral y la información del perfil*/
+    #contenido {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        height: 100vh;
+    }
+
+    /* BARRA LATERAL: contiene enlaces que direccionan  a las diferentes secciones */
+    #barra-lateral {
+        display: block;
+        position: sticky;
+        width: 25%;
+        height: 100vh;
+        overflow-y: auto;
+    }
+
+    #barra-lateral img {
+        width: 150px;
+        height: 150px;
+        border-radius: 100px;
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    #barra-lateral a{
+        padding: 20px;
+        font-size: 1.3em;
+    }
+
+    #barra-lateral i {
+        margin: 0 20px;
+        color: var(--azul-encendido);
+        
+    }
+
+    /* INFORMACIÓN PRINCIPAL: todo el contenido del perfil (espacio de la derecha)  */
+    #informacion-principal {
+        width: 65%;
+        margin: 0 auto;
+        overflow-y: auto;
+        height: 100vh;
+        /* Evita que se vea la barra de scroll en navegadores principales */
+        -webkit-scrollbar { 
+            display: none; } 
+        scrollbar-width: none; 
+        -ms-overflow-style: none;
+    }
+
+    /* CAMPOS: el campo y el valor se present en la misma línea*/
+    .campo {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        width: 100%;
+    
+    }
+
+    .campo h5 {
+        display: block;
+        width: 25%;
+    }
+
+    /* DIPLOMAS */
+    #diplomas .fila {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    #diplomas img {
+        width: 30%;
+    }
+
+}
