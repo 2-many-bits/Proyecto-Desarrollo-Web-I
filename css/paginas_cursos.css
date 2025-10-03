@@ -1,72 +1,75 @@
 /* 1. Estilos base para móviles (menos de 576px) */
-.container {
+.contenedor {
     width: 100%;
     display: flex;
     flex-flow: row wrap-reverse;
 }
 
-article.course-main-info{
-    padding: 5%;
-    margin: 0 auto;
+article#curso-detalles{
+    padding: 0;
+    margin: 0 5% 5%;
 }
 
-p.course-description{
+p#curso-descripcion{
     color: var(--azul-oscuro);
 }
 
-section.what-you-will-learn li{
+section#curso-aprendizajes li{
     display: flex;
     flex-flow: row wrap;
 }
 
-section.what-you-will-learn li svg{
+ul#curso-aprendizajes-lista svg{
     width: 25px;
     height: auto;
     margin-right: 4px;
 }
 
-aside{
+aside#curso-barra-lateral{
     margin-top: 15vh;
     padding: 5%;
     width: 100%;
 }
 
-aside li{
+aside#curso-barra-lateral li{
     color: var(--azul-oscuro);
     margin-left: 5%;
 }
 
-aside div.instructor-details{
-    display: flex;
-    flex-flow: row wrap;
-}
-
-aside div.instructor-details p{
-    color: var(--azul-oscuro);
-
-}
-
-section.prerequisites li{
+section#curso-prerrequisitos li{
     color: var(--azul-oscuro);
     margin-left: 5%;
 }
 
-details.accordion-item li{
+details.dropdown-elemento li{
     color: var(--azul-oscuro);
     margin-left: 5%;
 }
 
-/* 2. Estilos para móviles grandes y superiores */
-@media (min-width: 576px) {
-    .contenedor {
-        padding: 10px;
-    }
+#btnInscribirse{
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--azul-oscuro);
+    background: var(--verde-lima);
+    padding: 1% 5vw 2%;
+    margin-top: 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    transition: all 0.3s ease;
 }
 
-/* 3. Estilos para tabletas y superiores */
-@media (min-width: 768px) {
-    .contenedor {
-        max-width: 750px;
-        margin: 0 auto;
-    }
+#btnInscribirse:hover{
+    padding: 2% 5vw 3%;
+    color: var(--azul-encendido);
+}
+
+/*Tablets*/
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+}
+
+/*PC*/
+@media screen and (min-width: 769px){
+
 }
