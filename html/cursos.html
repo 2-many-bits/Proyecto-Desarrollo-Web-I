@@ -11,39 +11,27 @@
     <link rel="stylesheet" href="../css/cursos.css">
 </head>
 <body>
-    
     <header>
-        <!-- Este es el mismo header deberá actualizarse a futuro -->
-        <img src="../img/Nort3_Logo_Icono_sinFondo.png" alt="Logo NORT3"> 
-        <a href="index.html">NORT3</a>
+        <a href="../index.html"> 
+            <img src="../img/Nort3_Logo_Icono_sinFondo.png" 
+            alt="Logo NORT3">NORT3</a>
         <input type="checkbox" name="checkMenu" id="checkMenu">
         
         <label for="checkMenu" class="labelBotonMenu">
-            <i class="fa fa-navicon" id="btnMostrar"></i>
-            <i class="fa fa-remove" id="btnOcultar"></i>
+        <i class="fa fa-navicon" id="btnMostrar"></i>
+        <i class="fa fa-remove" id="btnOcultar"></i>
         </label>        
-        
         <nav>
             <ul>
-                <li>
                     <a href="../html/cursos.html">Cursos</a>
-                </li>
-                <li>
                     <a href="../html/mis_cursos.html">Mis Cursos</a>
-                </li>
-                <li>
                     <a href="../html/avisos_comunidad.html">Avisos</a>
-                </li>
-                <li>
                     <a href="../html/acerca_de.html">Nosotros</a>
-                </li>
-                <li>
                     <a href="../html/contacto.html">Contacto</a>
-                </li>
-                <li>
-                    <img src="../img/foto_perfil.jpg" alt="">
-                    <a href="../html/perfil.html">Aventurero 1</a>
-                </li>
+                    <a href="../html/perfil.html">
+                        <img src="../img/foto_perfil.jpg" alt="">
+                        Aventurero 1</a>
+                
             </ul>
         </nav>
     </header>
@@ -51,15 +39,25 @@
     <!-- CONTENIDO: Contiene toda la información de la página -->
     <section id="contenido">
 
+        <h2>Cursos</h2>
+        
+        <!-- ANUNCIOS: Contiene un pequeño banner con información -->
+        <div class="anuncios">
+            <article class="banner">
+                <h3>¿Quieres formar parte de la comunidad de NORT3?</h3>
+                <a href="../html/contacto.html" class="btn">¡Ponte en contacto aquí!</a>
+            </article>
+        </div>
+
         <!-- GALERIA: Contiene al texto y cajas -->
         <div id="galeria">
 
             <h2>Descubre los mejores cursos para ti</h2>
-            <hr>
+
             <!-- CURSOS: Contiene las cajas -->
             <div id="cursos">
                 <article class="caja">
-                    <img src="../img/boxful.png" alt="" class="imagen-caja">
+                    <img src="../img/boxful.png" alt="Logo boxful" class="imagen-caja">
                     <section class="informacion">
                         <h3 class="titulo-caja">Domina tus envíos con Boxful LATAM</h3>
                         <p class="descripcion">
@@ -68,12 +66,12 @@
                             rápida y segura, ideal para negocios que venden en línea y quieren mejorar 
                             su entrega.
                         </p>
-                        <a href="#" class="btn-caja">Comenzar ahora</a>
+                        <a href="../html/cursos/boxful_curso.html" class="btn-caja">Comenzar ahora</a>
                     </section>
                 </article>
 
                 <article class="caja">
-                    <img src="../img/fiado.jpg" alt="" class="imagen-caja">
+                    <img src="../img/fiado.jpg" alt="Publicidad fiado" class="imagen-caja">
                     <section class="informacion">
                         <h3 class="titulo-caja">Microcréditos al instante con Fiado App</h3>
                         <p class="descripcion">
@@ -82,12 +80,12 @@
                             solicitar un préstamo, construir tu historial crediticio y mejorar tu liquidez 
                             sin trámites complicados.
                         </p>
-                        <a href="#" class="btn-caja">Comenzar ahora</a>
+                        <a href="../html/cursos/fiado_curso.html" class="btn-caja">Comenzar ahora</a>
                     </section>
                 </article>
                 
                 <article class="caja">
-                    <img src="../img/sostengo.jpg" alt="" class="imagen-caja">
+                    <img src="../img/sostengo.jpg" alt="Logo sostengo" class="imagen-caja">
                     <section class="informacion">
                         <h3 class="titulo-caja">Seguros digitales con Sostengo</h3>
                         <p class="descripcion">
@@ -95,12 +93,12 @@
                             usando Sostengo. Ideal para emprendedores que quieren protegerse sin trámites 
                             complicados ni visitas presenciales.
                         </p>
-                        <a href="#" class="btn-caja">Comenzar ahora</a>
+                        <a href="../html/cursos/sostengo_curso.html" class="btn-caja">Comenzar ahora</a>
                     </section>
                 </article>
                 
                 <article class="caja">
-                    <img src="../img/abaco.png" alt="" class="imagen-caja">
+                    <img src="../img/abaco.png" alt="Logo abaco" class="imagen-caja">
                     <section class="informacion">
                         <h3 class="titulo-caja">Finanzas fáciles con Ábaco Capital</h3>
                         <p class="descripcion">
@@ -108,12 +106,12 @@
                             recibir capital y organizar tus finanzas. Pensado para negocios en crecimiento 
                             que buscan orden y eficiencia.
                         </p>
-                        <a href="#" class="btn-caja">Comenzar ahora</a>
+                        <a href="../html/cursos/abaco_curso.html" class="btn-caja">Comenzar ahora</a>
                     </section>
                 </article>
                 
                 <article class="caja">
-                    <img src="../img/weris.png" alt="" class="imagen-caja">
+                    <img src="../img/weris.png" alt="Publicidad weris" class="imagen-caja">
                     <section class="informacion">
                         <h3 class="titulo-caja">Delivery justo con Weris App</h3>
                         <p class="descripcion">
@@ -121,26 +119,25 @@
                             Este curso te enseña a registrar pedidos, usar la app y aprovechar sus tarifas accesibles 
                             para pequeños negocios.
                         </p>
-                        <a href="#" class="btn-caja">Comenzar ahora</a>
+                        <a href="../html/cursos/weris_curso.html" class="btn-caja">Comenzar ahora</a>
                     </section>
                 </article>
                 
                 <article class="caja">
-                    <img src="../img/applaudo.png" alt="" class="imagen-caja">
+                    <img src="../img/applaudo.png" alt="Logo applaudo" class="imagen-caja">
                     <section class="informacion">
                         <h3 class="titulo-caja">Transforma tu negocio con Applaudo</h3>
                         <p class="descripcion">
-                            Descubre cómo Applaudo, una empresa tecnológica salvadoreña, puede ayudarte a digitalizar 
+                            Descubre cómo Applaudo, puede ayudarte a digitalizar 
                             tu negocio. Este curso te enseña lo básico sobre cómo contratar servicios digitales, desde 
-                            diseño web hasta automatización de procesos, usando talento local de clase mundial. Ideal 
-                            para MYPEs que quieren modernizarse sin complicaciones técnicas.
+                            diseño web hasta automatización de procesos, usando talento local de clase mundial.
                         </p>
-                        <a href="#" class="btn-caja">Comenzar ahora</a>
+                        <a href="../html/cursos/applaudo_curso.html" class="btn-caja">Comenzar ahora</a>
                     </section>
                 </article>
                 
                 <article class="caja">
-                    <img src="../img/jobbi.png" alt="" class="imagen-caja">
+                    <img src="../img/jobbi.png" alt="Logo jobbi" class="imagen-caja">
                     <section class="informacion">                    
                         <h3 class="titulo-caja">Contrata talento con Jobbi</h3>
                         <p class="descripcion">
@@ -148,37 +145,42 @@
                             remoto en Latinoamérica. Aprende a publicar vacantes, revisar perfiles precalificados y contratar 
                             sin complicaciones. Ideal para negocios que buscan crecer sin aumentar costos operativos. 
                         </p>
-                        <a href="#" class="btn-caja">Comenzar ahora</a>
+                        <a href="../html/cursos/jobbi_curso.html" class="btn-caja">Comenzar ahora</a>
                     </section>
                 </article>
                 
                 <article class="caja">
-                    <img src="../img/n1co.png" alt="" class="imagen-caja">
+                    <img src="../img/n1co.png" alt="Logo N1CO" class="imagen-caja">
                     <section class="informacion"> 
                         <h3 class="titulo-caja">Pagos seguros con N1CO</h3>
                         <p class="descripcion">
                         Aprende a usar N1CO, una pasarela de pagos salvadoreña que permite cobrar en línea con seguridad. 
                         Ideal para negocios que quieren aceptar pagos digitales sin complicaciones. 
                         </p>
-                        <a href="#" class="btn-caja">Comenzar ahora</a>
+                        <a href="../html/cursos/n1co_curso.html" class="btn-caja">Comenzar ahora</a>
                     </section>
                 </article>
                 
                 <article class="caja">
-                    <img src="../img/tilopay.png" alt="" class="imagen-caja">
+                    <img src="../img/tilopay.png" alt="Logo tilopay" class="imagen-caja">
                     <section class="informacion"> 
                         <h3 class="titulo-caja">Tu tienda en línea con Tilopay + Shopify</h3>
                         <p class="descripcion">
                             Este curso te enseña a crear una tienda en línea usando Shopify y Tilopay, una solución salvadoreña
                             para pagos. Aprende a configurar productos, recibir pagos y vender desde redes sociales o tu sitio web.
                         </p>
-                        <a href="#" class="btn-caja">Comenzar ahora</a>
+                        <a href="../html/cursos/tilopay_curso.html" class="btn-caja">Comenzar ahora</a>
                     </section>
                 </article>
             </div>
         </div>
+        <!-- El footer es el mismo para todos -->
         <footer>
-            NORT3 - Derechos reservados 2025
+            <p>Derechos reservados 2025 - NORT3©</p>
+            <p>Email: nort3comunicacion@correo.com</p>
+            <p>Tel: +YYY XXXX-XXXX</p>
+            <p>Km 12 1/2 Carretera a Comasagua, Santa Tecla, 
+                Libertad, El Salvador.</p>
         </footer>
     </section>
 </body>

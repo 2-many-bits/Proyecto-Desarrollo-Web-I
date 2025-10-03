@@ -2,29 +2,9 @@
 @import url("../css/main.css");
 @import url("../css/menu.css");
 
-/* Declaración de variables para modularidad */
-
-
-/* COMIENZA TEMPORAL: Cuando los estilos del menú estén completos esto se eliminará */
-header {
-    background-color: var(--blanco-secundario);
-    width: 25%;
-    height: 100%;
-    position: fixed;
-    left: -25%;
-}
-
-header p {
-    color: var(--azul-oscuro)
-}
-
-header img {
-    width: 25px;
-}
-/* FIN DEL TEMPORAL */
-
 /* CONTENIDO: Contenedor principal con contendor de la galeria y pie de página */
 #contenido {
+    margin: 80px 0px 0px;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -34,15 +14,59 @@ header img {
     align-items: center;
 }
 
-footer {
-    height: 8vh;
-    width: 100%;
+#contenido > h2 {
+    font-size: 3rem;
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 1.5%;
+}
+
+/* ANUNCIOS: Encabezado de página que muestra avisos */
+.anuncios {
+    border: solid 1px var(--gris-fondos);
+    border-radius: 15px;
+    display: block;
+    width: 80%;
+    justify-content: center;
+}
+
+.anuncios article{
+    margin: 1%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: radial-gradient(circle, rgba(35, 41, 69, 0.7) 30%, rgba(29, 36, 68, 0.9) 70%), url("../img/comunidad.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 25%;
+    height: 50vh;
+}
+
+.anuncios h3 {
+    background: none;
+    font-size: 50px;
+    text-align: center;
+    color: var(--azul-medio);
+}
+
+.anuncios .btn {
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    margin: 20px;
+    padding: 8px 25px 13px;
+    font-size: 1.4em;
+    background-color: var(--verde-lima);
+    border-radius: 10px;
+    box-shadow: 2px 5px 16px 0px #0B325E, 0px 6px 39px 1px rgba(0,0,0,0);
+}
+
+.anuncios .btn:hover {
+    scale: 1.15;
+    color: var(--verde-lima);
     background-color: var(--azul-oscuro);
-    color: var(--blanco-primario);
-    font-size: 20px;
 }
 
 /* GALERIA: Agrupa al título de la página y el contendor de las cajas */
@@ -55,17 +79,12 @@ footer {
 }
 
 #galeria > h2 {
-    font-size: 40px;
-    text-align: center;
+    font-size: 2em;
+    text-align: left;
     background-color: var(--blanco-primario);
     width: 78vw;
-    margin: 20px 1vw 0px;
-}
-
-#galeria hr {
-    width: 78vw;
-    margin: 0 auto 20px;
-    text-align: center;
+    margin: 1.5vh 1vw;
+    border-bottom: 1px solid var(--gris-fondos);
 }
 
 /* CURSOS: Contenedor de las cajas */
@@ -76,22 +95,23 @@ footer {
     gap: 0.5%;
     justify-content: space-evenly;
     align-content: space-evenly;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 /* Cajas: Contenedores de información principal */
 
 .caja {
-    width: 31%;
+    width: 27%;
     box-sizing: border-box;
-    padding: 0px 0px 0px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
     justify-content: baseline;
     align-content: center;
     background-color: var(--azul-medio);
     border-radius: 2%;
-    margin: 1%;
+    border: 1px solid var(--gris-fondos);
+    margin: 1.75% 0%;
     box-shadow: 0px 6px 29px 1px rgba(0,0,0,0.57);
     transition: all 1s;
 }
@@ -103,16 +123,9 @@ footer {
 }
 
 .imagen-caja {
-    border: 1px solid var(--blanco-secundario);
-    border-bottom: none;
     width: 100%;
     height: 200px;
-    border-radius: 2% 2% 1% 1%;
-}
-
-.caja:hover > .imagen-caja {
-    border: 2px solid var(--azul-medio);
-    border-bottom: none;
+    border-radius: 2% 2% 0 0;
 }
 
 /* INFORMACIÓN: Contiene al título del curso, la descripción y el botón de enviado */
@@ -121,32 +134,25 @@ footer {
     flex-grow: 1;
     margin: 0;
     padding: 0px 10px 10px;
-    border: 1px solid var(--blanco-primario);
-    border-top: 1px solid var(--azul-medio);
     border-radius: 0 0 2% 2%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     background-color: var(--azul-medio);
 }
 
-.caja:hover > .informacion {
-    border: 2px solid var(--azul-medio);
-    border-top: none;
-}
-
 .titulo-caja {
-    background-color: var(--azul-medio);
-    color: var(--blanco-secundario);
+    background-color: transparent;
+    color: var(--azul-oscuro);
     text-align: center;
     margin: 10px 10px 5px;
     font-size: 25px;
 }
 
 .descripcion {
-    background-color: var(--azul-medio);
-    color: var(--blanco-primario);
+    background-color: transparent;
+    color: var(--azul-oscuro);
     padding: 5px 10px;
     text-align: center;
     flex-grow: 1;
@@ -155,35 +161,38 @@ footer {
 .btn-caja {
     color:var(--azul-oscuro);
     background-color: var(--verde-lima);
-    border-radius: 5%;
-    padding: 10px 15px;
-    margin: 10px 10px;
+    border-radius: 5px;
+    padding: 15px 25px;
+    margin: 10px;
+    font-size: 1.15em;
     text-decoration: none;
     text-align: center;
-    align-self: center;
+    /* align-self: center; */
     box-shadow: 2px 5px 16px 0px #0B325E, 0px 6px 39px 1px rgba(0,0,0,0);
     transition: all 0.3s;
 }
 
 .btn-caja:hover {
     scale: 1.15;
-    color: var(--azul-medio);
+    color: var(--verde-lima);
+    background-color: var(--azul-oscuro);
 }
 
-
-
+/* TABLET - IPAD: Adaptaciones al tamaño mediano */
 @media screen and (min-width:481px) and (max-width:768px) {
     .caja {
         width: 47%;
     }
 }
 
+/* COMPUTADORA: Adaptaciones al diseño grande */
 @media screen and (min-width:769px) {
     .caja {
         width: 31%;
     }
 }
 
+/* CELULAR: Adaptaciones necesarias para el tamaño más pequeño */
 @media screen and (max-width:480px) {
     .caja {
         width:100%;
