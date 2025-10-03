@@ -2,19 +2,95 @@
 @import url("../css/menu.css");
 @import url("../css/main.css");
 
+/*Moviles*/
 /* CONTENIDO: Contenedor principal con las secciones y el pie de página*/
 main {
     position: relative;
-    top: 15vh ;
+    top: 15vh;
 }
 
-main p {
-    color: var(--azul-medio);
+/* Solo presente en la versión tablet o PC*/
+#barra-lateral {
+    display: none;
 }
 
-/* QUITA ESTILOS A LOS ENLACES */
-a:active {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+/*  PEFIL */
+#perfil-movil {
+    text-align: center;
+    padding: 20px 0px;
 }
+
+#perfil-movil img,
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    display: block;
+    margin: 0 auto;
+
+}
+/* SECCIONES DE INFORMACIÓN */
+#informacion-principal article {
+    width: 90%;
+    padding: 30px 20px ;
+    margin: 20px auto;
+    background: none;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid var(--gris-fondos) ;
+}
+
+#informacion-principal article h1 {
+    padding-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* Estilo herdedado que se buscan personalziar */
+#informacion-principal h1, h3, h5, h4 {
+    background-color: transparent;
+}
+
+/* DATOS DE SECCION */
+.tabla .fila {
+    margin: 10px 0px;
+    padding: 15px;
+    background-color: white;
+
+}
+
+.tabla .fila:first-of-type {
+    border-radius: 20px 20px 0px 0px;
+}
+
+.tabla .fila:last-of-type {
+    border-radius: 0px 0px 20px 20px;
+}
+
+.tabla .fila:hover{
+    background-color: var(--gris-fondos);
+}
+.tabla .fila:hover h3, .tabla .fila:hover h5 {
+    color: var(--azul-encendido);
+}
+
+/* DIPLOMAS */
+#diplomas .tabla .fila {
+    border-radius: 20px;
+}
+
+#diplomas img {
+    width: 150px;
+    height: auto;
+    border-radius: 0px;
+    margin: 20px auto;
+}
+
+#diplomas img:hover {
+    transform: scale(1.07);
+}
+
+/*Tablets*/
+@media screen and (min-width: 481px) and (max-width: 768px) {}
+
+/*PC*/
+@media screen and (min-width: 769px) {}

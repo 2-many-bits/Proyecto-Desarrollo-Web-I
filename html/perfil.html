@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de</title>
-    <link rel="stylesheet" href="../css/acerca_de.css">
+    <link rel="stylesheet" href="../css/perfil.css">
 
     <!-- RECURSO PARA LOS ICONOS DE LA BARRA LATERAL-->
     <script src="https://kit.fontawesome.com/daeb1252d4.js" crossorigin="anonymous"></script>
@@ -42,8 +42,9 @@
         <!-- CONTENIDO: Contiene toda la información de la página y la barra lateral -->
         <div id="contenido">
 
-            <!-- BARRA-LATERAL: Contiene un menú que dirige a las diferentes secciones del perfil -->
+            <!-- BARRA-LATERAL: Contiene un menú que dirige a las diferentes secciones del perfil. Solo se verá en tablet o PC -->
             <aside id="barra-lateral">
+                <img src="../img/foto_perfil.jpg" alt="foto de perfil">
                 <a href="#informacion-personal">
                     <i class="fa-solid fa-user"></i>
                     <h4>Información personal</h4>
@@ -65,8 +66,13 @@
                     <h4>Diplomas</h4>
                 </a>
             </aside>
+            <!--PEFIL: se visualizará solo en móvil-->
+            <div id="perfil-movil">
+                <img src="../img/foto_perfil.jpg" alt="foto de perfil">
+                <h2>Emanuel Rivas</h2>
+            </div>
 
-            <!-- CONTENIDO: Contiene toda la información de la página y la barra lateral -->
+            <!-- INFORMACIÓN PRINCIPAL: Articles con los datos del perfil-->
             <section id="informacion-principal">
                 <article id="informacion-personal">
                     <h1>Información personal</h1>
@@ -82,11 +88,11 @@
                         <div class="fila">
                             <h5>Género</h5>
                             <h3>Masculino</h3>
-                        </div> 
+                        </div>
                         <div class="fila">
                             <h5>Dirección de casa</h5>
                             <h3>Calle Central, Barrio El Centro, San Vicente</h3>
-                        </div> 
+                        </div>
                     </div>
                 </article>
                 <article id="contactos">
@@ -125,8 +131,8 @@
                     <h1>Logros</h1>
                     <div class="tabla">
                         <div class="fila">
-                            <h5>Aumento de ventas</h5>
-                            <h4>Diseñé e implementé una estrategia comercial que incrementó las ventas y mejoró la penetración en el mercado</h4>
+                            <h5>Años usando Nort3</h5>
+                            <h3>2</h>
                         </div>
                         <div class="fila">
                             <h5>Cursos completados</h5>
@@ -176,13 +182,13 @@
 
             </section>
         </div>
-         <footer>
+        <footer>
             <p>Derechos reservados 2025 - NORT3©</p>
             <p>Email: nort3comunicacion@correo.com</p>
             <p>Tel: +YYY XXXX-XXXX</p>
             <p>Km 12 1/2 Carretera a Comasagua, Santa Tecla,
                 Libertad, El Salvador.</p>
-        </footer> 
+        </footer>
     </main>
 
 </body>
