@@ -4,7 +4,7 @@
 
 /* CONTENIDO: Contenedor principal con contendor de la galeria y pie de página */
 #contenido {
-    margin: 80px 0px 0px;
+    margin: 15vh 0px 0px;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -29,10 +29,12 @@
     display: block;
     width: 80%;
     justify-content: center;
+    overflow: hidden;
 }
 
 .anuncios article{
     margin: 1%;
+    padding: 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,7 +48,7 @@
 
 .anuncios h3 {
     background: none;
-    font-size: 50px;
+    font-size: 6vh;
     text-align: center;
     color: var(--azul-medio);
 }
@@ -57,7 +59,7 @@
     text-align: center;
     margin: 20px;
     padding: 8px 25px 13px;
-    font-size: 1.4em;
+    font-size: 3vh;
     background-color: var(--verde-lima);
     border-radius: 10px;
     box-shadow: 2px 5px 16px 0px #0B325E, 0px 6px 39px 1px rgba(0,0,0,0);
@@ -79,7 +81,7 @@
 }
 
 #galeria > h2 {
-    font-size: 2em;
+    font-size: 5vh;
     text-align: left;
     background-color: var(--blanco-primario);
     width: 78vw;
@@ -179,9 +181,17 @@
 }
 
 /* TABLET - IPAD: Adaptaciones al tamaño mediano */
-@media screen and (min-width:481px) and (max-width:768px) {
+@media screen and (min-width:481px) and (max-width:768px) {    
     .caja {
         width: 47%;
+    }
+
+    .anuncios h3 {
+        font-size: 4.6vh;
+    }
+
+    .anuncios .btn {
+        font-size: 2.5vh;
     }
 }
 
@@ -201,5 +211,17 @@
 
     .descripcion {
         display: none;
+    }
+
+    .anuncios h3 {
+        font-size: 4.2vh;
+    }
+
+    .anuncios .btn {
+        font-size: 2.5vh;
+    }
+
+    #galeria > h2 {
+        font-size: 4vh;
     }
 }
