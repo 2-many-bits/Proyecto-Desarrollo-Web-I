@@ -1,13 +1,6 @@
 @import url("../css/menu.css");
 @import url("../css/main.css");
 
-:root {
-    --blanco-primario: #F4F0E3;
-    --azul-oscuro: #232945;
-    --verde-lima: #C6E369;
-    --azul-medio: #92B3D2;
-}
-
 /* CUERPO */
 body {
     display: flex;
@@ -16,20 +9,10 @@ body {
     align-items: center;
 }
 
-/* TEMPORAL - MENÚ */
-header {
-    width: 25%;
-    position: absolute;
-    left: -25%;
-}
-
-header img {
-    max-width: 25%;
-}
-
 /* CONTENIDO: Agrupa toda la página luego del nav */
 
 #contenido {
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -50,7 +33,7 @@ header img {
 
 /* ANUNCIOS: Encabezado de página que muestra avisos */
 #anuncios {
-    border: solid 1px var(--azul-medio);
+    border: solid 1px var(--gris-fondos);
     border-radius: 15px;
     display: block;
     width: 80%;
@@ -58,7 +41,7 @@ header img {
 }
 
 #fondo-imagen {
-    margin: 2.5%;
+    margin: 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,7 +87,7 @@ header img {
 #cursos .encabezado {
     font-size: 2em;
     margin-bottom: 2%;
-    border-bottom: solid 1px var(--azul-medio);
+    border-bottom: solid 1px var(--gris-fondos);
 }
 
 /* TARJETAS: Contiene a cada una de las tarjetas de cursos */
@@ -112,9 +95,9 @@ header img {
 #tarjetas {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-content: flex-start;
-    gap: 40px;
+    gap: 20px;
 }
 
 #tarjetas .tarjeta {
@@ -122,14 +105,16 @@ header img {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    background-color: var(--azul-medio);
+    background: var(--azul-medio);
     height: 30vh;
     overflow: hidden;
     box-sizing: border-box;
-    border: 1px solid var(--azul-medio);
+    border: 1px solid var(--gris-fondos);
     border-radius: 5px;
     box-shadow: 0px 6px 29px 1px rgba(0,0,0,0.2);
     transition: all 0.4s;
+    margin: 0px;
+    padding: 0px;
 }
 
 #tarjetas .tarjeta:hover {
@@ -163,6 +148,7 @@ header img {
     background-color: transparent;
     font-size: 1.4em;
     padding-right: 5%;
+    color: var(--azul-oscuro)
 }
 
 .descripcion {
@@ -188,7 +174,7 @@ header img {
     background-color: transparent;
     font-size: 2em;
     font-style: italic;
-    color: var(--azul-oscuro);
+    color: var(--azul-encendido);
     font-weight: bold;
 }
 
