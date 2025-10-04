@@ -54,7 +54,7 @@ nav ul a{
 
     .perfil{
         position: fixed;
-        top: 25px;
+        top: 3.3vh;
         z-index: 10;
         width: 170px;
         height: 70px;
@@ -110,7 +110,7 @@ nav ul a{
 
     .perfil{
         position: fixed;
-        top: 25px;
+        top: 3.3vh;
         z-index: 10;
         width: 170px;
         height: 70px;

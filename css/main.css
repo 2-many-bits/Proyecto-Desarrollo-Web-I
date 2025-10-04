@@ -89,7 +89,117 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
 
 /*Moviles*/
 @media screen and (max-width: 480px){
+     header{
+        justify-content: space-between;
+        padding: 0 30px;
+        height: 13vh;
+        padding: 3% 3% 0 3% ;
+
+    }
+    article{
+    margin-top: 13vh;
+    }
+
+#logo{
+    width: 30%;
+    min-width: 200px;
+    display: block;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 10px 0;
+}
+
+.logo h1{
+    font-size: 6rem;
+}
+
+.landing .logo h2{
+    margin-top:20px;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.landing h2{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.landing:nth-child(2){
+    padding: 10px 0;
+}
+
+.landing:nth-child(2) p{
+    color: var(--azul-oscuro);
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.landing:nth-child(2) img{
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+
+}
+.landing .btn{
+    font-size: larger;
+    width: 220px;
+    height: 30px;
+}
+
+.landing:nth-child(3){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing:nth-child(3) .imgDesc{
+    width: 60%;
     
+}
+.imgDesc h3{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.landing:nth-child(4){
+    margin: 40px auto;
+}
+
+
+
+.landing:nth-child(5){
+    margin: 40px auto;
+}
+
+#equipo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#equipo .miembro{
+    width: 45%;
+    margin: 10px auto;
+}
+
+#equipo .miembro img{
+    width: 80%;
+    border-radius: 50px;
+}
+
+#equipo .miembro h4{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
 }
 
 /*Tablets*/
@@ -266,9 +376,6 @@ margin-top: 15vh;
     font-size: 1.25rem;
     
 }
-}
-
-
 .landing:nth-child(2){
     padding: 40px 0;
 }
@@ -339,3 +446,7 @@ margin-top: 15vh;
     text-align: center;
     width: 100%;
 }
+}
+
+
+
