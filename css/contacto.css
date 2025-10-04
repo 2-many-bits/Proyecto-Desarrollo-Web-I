@@ -34,6 +34,10 @@ form {
 }
 form section{
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
 }
 
 form section label, form section input, form p{

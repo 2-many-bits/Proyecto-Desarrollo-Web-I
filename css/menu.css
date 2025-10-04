@@ -11,10 +11,16 @@ header img{
 #inicio{
     font-size: 5vh;
     font-weight: bold;
+    transition: all 0.3s;
 }
 
 header input{
     display: none;
+}
+
+header nav ul{
+    transition: all 0.3s;
+
 }
 
 header nav ul a{
@@ -54,7 +60,7 @@ header nav ul a{
         position: absolute;
         height: 100px;
         width: 220px;
-        left: -500px;
+        left: -100px;
     }
 header label:hover, nav ul a:hover, #inicio:hover{
     color: var(--azul-encendido);
