@@ -130,6 +130,7 @@ a:active {
 #mosaico {
     background-color: var(--azul-medio);
     padding-bottom: 50px;
+    width: 100%;
 
 
 }
@@ -196,7 +197,7 @@ a:active {
 
 /* TABLETS */
 @media screen and (min-width:481px) and (max-width:768px) {
-
+  
     #presentacion h1 {
         font-size: 25px;
         margin-top: 7%;
