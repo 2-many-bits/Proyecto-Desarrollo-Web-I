@@ -1,0 +1,442 @@
+/* Importación de estilos generales */
+@import url("../css/menu.css");
+@import url("../css/main.css");
+
+/* ESTILOS GENERALES  */
+
+
+/* Contenedor principal */
+
+/* Ajuste del icono de hamburguesa */
+#btnMostrar,
+#btnOcultar {
+    padding: 22px 24px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#informacion-principal h1,
+h3,
+h5,
+h4, p,i, .encabezado-aviso, .detalles-aviso, span{ 
+    background-color: transparent;
+}
+
+
+/* BANNER PRINCIPAL  */
+#banner-avisos {
+    width: 100vw;
+    height: 30vh;
+    background: radial-gradient(circle, rgba(35, 41, 69, 0.7) 30%, rgba(29, 36, 68, 0.9) 70%), 
+                url("../img/comunidad.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-banner {
+    text-align: center;
+    padding: 20px;
+    background: none;
+}
+
+.overlay-banner h1 {
+    background: none;
+    color: var(--azul-medio);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.overlay-banner p {
+    background: none;
+    color: var(--blanco-primario);
+    font-size: 1.1rem;
+}
+
+/* SECCIONES DE AVISOS  */
+#avisos-destacados,
+#avisos-recientes {
+    padding: 30px 5%;
+}
+
+#avisos-destacados h2,
+#avisos-recientes h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: var(--azul-oscuro);
+    border-bottom: 3px solid var(--azul-medio);
+    padding-bottom: 10px;
+}
+
+.contenedor-avisos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* TARJETAS DE AVISOS  */
+.tarjeta-aviso {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--azul-medio);
+}
+
+.tarjeta-aviso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-aviso.destacado {
+    border-left: 4px solid var(--verde-lima);
+    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+}
+
+/* Encabezado del aviso */
+.encabezado-aviso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.etiqueta.eventos {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.etiqueta.cursos {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.etiqueta.noticias {
+    background-color: #fff3e0;
+    color: #f57c00;
+}
+
+.etiqueta.oportunidades {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+
+.fecha {
+    color: var(--gris-fondos);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Título del aviso */
+.tarjeta-aviso h3 {
+    font-size: 1.4rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+/* Descripción del aviso */
+.descripcion-aviso {
+    color: var(--azul-oscuro);
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Detalles adicionales */
+.detalles-aviso {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    border-top: 1px solid var(--gris-fondos);
+}
+
+.detalles-aviso span {
+    color: var(--azul-oscuro);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.detalles-aviso i {
+    color: var(--azul-encendido);
+}
+
+/* Botón "Ver más" */
+.btn-ver-mas {
+    display: inline-block;
+    background-color: var(--verde-lima);
+    color: var(--azul-oscuro);
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+    background-color: var(--azul-encendido);
+    color: var(--blanco-primario);
+    transform: scale(1.05);
+}
+
+/* SECCIÓN DE SUSCRIPCIÓN  */
+#suscripcion {
+    padding: 50px 5%;
+    background-color: var(--azul-medio);
+    text-align: center;
+}
+
+.contenedor-suscripcion {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.icono-grande {
+    font-size: 4rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 20px;
+}
+
+#suscripcion h2 {
+    font-size: 2rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 15px;
+}
+
+#suscripcion p {
+    color: var(--azul-oscuro);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.btn-suscribir {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--verde-lima);
+    color: var(--azul-oscuro);
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.btn-suscribir:hover {
+    background-color: var(--azul-oscuro);
+    color: var(--verde-lima);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* TABLETS */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    
+    .overlay-banner h1 {
+        font-size: 3rem;
+    }
+
+    .overlay-banner p {
+        font-size: 1.3rem;
+    }
+
+    .contenedor-avisos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    #avisos-destacados .contenedor-avisos {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-aviso h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/*  PC  */
+@media screen and (min-width: 769px) {
+    
+    /* Ajusta el scroll al espacio del menu superior*/
+    main   {
+        position: relative;
+        top: 15vh;
+    }
+
+    #banner-avisos {
+        height: 40vh;
+    }
+
+    .overlay-banner h1 {
+        font-size: 3.5rem;
+    }
+
+    .overlay-banner p {
+        font-size: 1.5rem;
+    }
+
+    #filtros h2 {
+        font-size: 2.2rem;
+    }
+
+    .contenedor-filtros {
+        gap: 15px;
+    }
+
+    .filtro-btn {
+        font-size: 1.1rem;
+        padding: 12px 25px;
+    }
+
+    #avisos-destacados,
+    #avisos-recientes {
+        padding: 50px 10%;
+    }
+
+    #avisos-destacados h2,
+    #avisos-recientes h2 {
+        font-size: 2.5rem;
+    }
+
+    .contenedor-avisos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    #avisos-destacados .contenedor-avisos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tarjeta-aviso {
+        padding: 25px;
+    }
+
+    .tarjeta-aviso h3 {
+        font-size: 1.6rem;
+    }
+
+    .descripcion-aviso {
+        font-size: 1.05rem;
+    }
+
+    #suscripcion {
+        padding: 70px 10%;
+    }
+
+    .icono-grande {
+        font-size: 5rem;
+    }
+
+    #suscripcion h2 {
+        font-size: 2.5rem;
+    }
+
+    #suscripcion p {
+        font-size: 1.2rem;
+    }
+}
+
+/*  MÓVILES */
+@media screen and (max-width: 480px) {
+    
+    .overlay-banner h1 {
+        font-size: 2rem;
+    }
+
+    .overlay-banner p {
+        font-size: 1rem;
+    }
+
+    #filtros {
+        padding: 20px 3%;
+    }
+
+    #filtros h2 {
+        font-size: 1.5rem;
+    }
+
+    .filtro-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    #avisos-destacados,
+    #avisos-recientes {
+        padding: 20px 3%;
+    }
+
+    #avisos-destacados h2,
+    #avisos-recientes h2 {
+        font-size: 1.6rem;
+    }
+
+    .tarjeta-aviso {
+        padding: 15px;
+    }
+
+    .tarjeta-aviso h3 {
+        font-size: 1.2rem;
+    }
+
+    .descripcion-aviso {
+        font-size: 0.95rem;
+    }
+
+    .detalles-aviso {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    #suscripcion {
+        padding: 30px 5%;
+    }
+
+    .icono-grande {
+        font-size: 3rem;
+    }
+
+    #suscripcion h2 {
+        font-size: 1.6rem;
+    }
+
+    #suscripcion p {
+        font-size: 1rem;
+    }
+
+    .btn-suscribir {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
