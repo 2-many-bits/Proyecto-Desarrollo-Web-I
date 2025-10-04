@@ -20,6 +20,56 @@ nav ul a{
 
 /*Moviles*/
 @media screen and (max-width: 480px){
+    header a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+    header label{
+        display: none;
+    }
+    nav ul{
+        position:relative;
+        font-size: larger;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        list-style: none;
+        width: 150px;
+        background: none;
+    }
+
+    .contenido{
+        display: none;
+        position: relative;
+        top: 210px;
+        z-index: 10;
+        width: 170px;
+        height: 70px;
+        background: var(--verde-lima);
+        z-index: 10;;
+    }
+
+    .perfil{
+        position: fixed;
+        top: 3.3vh;
+        z-index: 10;
+        width: 170px;
+        height: 70px;
+    }
+    
+    nav ul:hover a.contenido{
+        display:flex;
+    }
+
+    .contenido:hover, .perfil:hover{
+        color: var(--azul-encendido);
+        border-left: solid 2px var(--azul-encendido);
+        font-size: large;
+        border-right: solid 2px var(--azul-encendido);
+    }
     
 }
 
@@ -60,7 +110,7 @@ nav ul a{
 
     .perfil{
         position: fixed;
-        top: 25px;
+        top: 3.3vh;
         z-index: 10;
         width: 170px;
         height: 70px;
