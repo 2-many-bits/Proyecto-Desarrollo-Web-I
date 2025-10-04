@@ -33,6 +33,7 @@ header{
     position: fixed;
     top: 0;
     z-index: 100;
+    transition: all 0.5s ease;
 }
 
 footer{
@@ -89,16 +90,16 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
 
 /*Moviles*/
 @media screen and (max-width: 480px){
-     header{
-        align-items: center;
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
         padding: 0 30px;
-        height: 13vh;
-        padding: 3% 3% 0 3% ;
 
     }
     article{
-    padding: 20px;
-    margin-top: 13vh;
+        padding: 60px;
+
     }
 
 #logo{
@@ -126,7 +127,7 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
 
 .landing h2{
     text-align: center;
-    font-size: 2rem;
+    font-size: 0.8rem;
 }
 
 .landing:nth-child(2){
@@ -215,14 +216,11 @@ footer p{
         align-items: flex-start;
         justify-content: space-between;
         padding: 0 30px;
-        height: 13vh;
-        padding: 3% 3% 0 3% ;
-        width:100%;
 
     }
     article{
         padding: 60px;
-    margin-top: 13vh;
+
     }
 
 #logo{
@@ -335,7 +333,7 @@ footer p{
 /*PC*/
 @media screen and (min-width: 769px){
     header{
-        width:100%;
+            width:100%;
         justify-content: space-between;
         height:15vh;
         border-bottom: solid 2px var(--gris-fondos);
