@@ -198,7 +198,7 @@ a:active {
 @media screen and (min-width:481px) and (max-width:768px) {
 
     #presentacion h1 {
-        font-size: 35px;
+        font-size: 25px;
         margin-top: 7%;
 
     }
@@ -236,7 +236,7 @@ a:active {
     }
 
     #presentacion h1 {
-        font-size: 40px;
+        font-size: 30px;
         width: 45%;
         margin-left: 50%;
         margin-top: 2%;
