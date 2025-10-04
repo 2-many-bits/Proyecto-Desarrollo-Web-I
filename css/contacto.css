@@ -1,12 +1,6 @@
 /*Hoja de estilo para pagina de contactos*/
 
-/*Para que aparezca el select el usuario debe decir que su empresa esta afiliada*/
-form #empresa input#si:checked ~ #cualEmpresa {
-    display: block;
-}
-form #empresa input#no:checked ~ #cualEmpresa {
-    display: none;
-}
+/*ESTILO GENERAL CONTACTO*/
 
 label[name="empresa"], input[type="radio"], section#empresa p{
     display: none;
