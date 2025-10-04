@@ -14,7 +14,7 @@ header input{
     display: none;
 }
 
-nav ul a{
+header nav ul a{
     transition: all 0.3s ;
 }
 
@@ -28,7 +28,7 @@ nav ul a{
     }
 
     
-    nav ul{
+    header nav ul{
         position:absolute;
         font-size: larger;
         font-weight: bold;
@@ -44,16 +44,16 @@ nav ul a{
     
     }
 
-    nav ul a{
+    header nav ul a{
         height: 70px;
     }
 
 
-label:hover, nav ul a:hover{
+header label:hover, nav ul a:hover{
     color: var(--azul-encendido);
 }
 
-nav ul a:hover{
+header nav ul a:hover{
     margin-left: 10px;
 }
 
@@ -107,7 +107,7 @@ nav ul a:hover{
     }
 
     
-    nav ul{
+    header nav ul{
         position:absolute;
         font-size: larger;
         font-weight: bold;
@@ -123,16 +123,16 @@ nav ul a:hover{
     
     }
 
-    nav ul a{
+    header nav ul a{
         height: 70px;
     }
 
 
-label:hover, nav ul a:hover{
+header label:hover, nav ul a:hover{
     color: var(--azul-encendido);
 }
 
-nav ul a:hover{
+header nav ul a:hover{
     margin-left: 10px;
 }
 

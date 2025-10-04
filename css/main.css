@@ -27,7 +27,7 @@ p,li,input{
 }
 
 header{
-    width:100%;
+
     display: flex;
     align-items: center;
     position: fixed;
@@ -57,7 +57,7 @@ background: #F4F0E3;
 background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175, 1) 100%);
 }
 
-.landing .btn{
+.landing .btn, input[type="submit"]{
     background: var(--verde-lima);
     margin: 20px auto 0;
     text-align: center;
@@ -65,10 +65,11 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
     text-decoration: none;
     font-weight: 600;
     border-radius: 10px;
+    color: var(--azul-oscuro);
     
 }
 
-.landing .btn:hover{
+.landing .btn:hover, input[type="submit"]:hover{
     color: var(--azul-encendido);
     font-size: large;
 
@@ -119,13 +120,13 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
 
 .landing .logo h2{
     margin-top:20px;
-    font-size: 1rem;
+    font-size: 2rem;
     text-align: center;
 }
 
 .landing h2{
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 2rem;
 }
 
 .landing:nth-child(2){
@@ -216,6 +217,7 @@ footer p{
         padding: 0 30px;
         height: 13vh;
         padding: 3% 3% 0 3% ;
+        width:100%;
 
     }
     article{
@@ -333,6 +335,7 @@ footer p{
 /*PC*/
 @media screen and (min-width: 769px){
     header{
+        width:100%;
         justify-content: space-between;
         height:15vh;
         border-bottom: solid 2px var(--gris-fondos);

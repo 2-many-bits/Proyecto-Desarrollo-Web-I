@@ -1,0 +1,150 @@
+/*Para que aparezca el select el usuario debe decir que su empresa esta afiliada*/
+form #empresa input#si:checked ~ #cualEmpresa {
+    display: block;
+}
+form #empresa input#no:checked ~ #cualEmpresa {
+    display: none;
+}
+
+label[name="empresa"], input[type="radio"], section#empresa p{
+    display: none;
+}
+
+
+/*MOVILES*/
+@media screen and (max-width: 480px){
+        h1{
+        font-size: 3rem;
+        text-align: center;
+    }
+    h2{
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form section{
+    padding: 10px;
+}
+
+form section label, form section input, form p{
+    font-size: 1.2rem;
+    color: var(--azul-oscuro);
+}
+
+input[type="submit"]{
+    font-size: large;
+    width: 80px;
+}
+
+textarea, select, select option{
+    font-size: 1.2rem;
+    color: var(--azul-oscuro);
+}
+    
+}
+/*TABLETS*/
+@media screen and (min-width: 481px) and (max-width: 768px){
+    h1{
+        font-size: 3rem;
+        text-align: center;
+    }
+    h2{
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form section{
+    padding: 10px;
+}
+
+form section label, form section input, form p{
+    font-size: 1.2rem;
+    color: var(--azul-oscuro);
+}
+
+input[type="submit"]{
+    font-size: large;
+    width: 80px;
+}
+
+textarea, select, select option{
+    font-size: 1.2rem;
+    color: var(--azul-oscuro);
+}
+
+}
+/*PC*/
+@media screen and (min-width: 769px){
+      h1{
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    h2{
+    text-align: center;
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+}
+form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+form section{
+    padding: 10px;
+}
+
+
+form section label, form section input, form p{
+    font-size: 1.5rem;
+    color: var(--azul-oscuro);
+}
+
+
+
+input[type="text"],textarea,input[type="email"], select{
+    width: 50vw;
+}
+
+section#empresa{
+    width:50vw;
+    display: flex;
+}
+label[name="empresa"]{
+    padding-right: 40px;
+}
+
+#empresa p{
+    padding-right: 40px;
+}
+form section label, form section input, form p{
+    font-size: 1.2rem;
+    color: var(--azul-oscuro);
+}
+
+input[type="submit"]{
+    font-size: 1.5rem;
+    width: 100px;
+}
+
+textarea, select, select option{
+    font-size: 1.2rem;
+    color: var(--azul-oscuro);
+}
+
+
+}
