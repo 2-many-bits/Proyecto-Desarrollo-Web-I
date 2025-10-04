@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NORT3</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"> 
+            <img src="img/Nort3_Logo_Icono_sinFondo.png" 
+            alt="Logo NORT3">NORT3</a>
+        <input type="checkbox" name="checkMenu" id="checkMenu">
+        
+        <label for="checkMenu" class="labelBotonMenu">
+        <i class="fa fa-navicon" id="btnMostrar"></i>
+        <i class="fa fa-remove" id="btnOcultar"></i>
+        <b id="menuLabel">Menu</b>
+        </label>        
+        <nav>
+            <ul>
+                    <a href="html/cursos.html" class="contenido">Cursos</a>
+                    <a href="html/mis_cursos.html" class="contenido">Mis Cursos</a>
+                    <a href="html/avisos_comunidad.html" class="contenido">Avisos</a>
+                    <a href="html/acerca_de.html" class="contenido">Nosotros</a>
+                    <a href="html/contacto.html" class="contenido">Contacto</a>
+                    <a href="html/perfil.html" class="perfil">
+                        <img src="img/foto_perfil.jpg" alt="">
+                        Aventurero 1</a>
+                
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <h1>Contacto</h1>
+    <h2>¡Reporta problemas, elabora consultas y danos sugerencias!</h2>
+    <form method="post" action="../index.html">
+        <label name="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" required>
+        <label name="correo">Correo: </label>
+        <input type="email" name="correo" id="correo" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+        <label name="empresa"> ¿Forma parte de una empresa asociada a nosotros?</label>
+        <p><input type="radio" name="empresa"> Sí</p>
+        <p><input type="radio" name="empresa" checked> No</p>
+        <label name="cual-empresa">Empresa: </label>
+        <select name="cual-empresa" id="cual-empresa">
+            <option value="Comedores Marta">Comedores Marta</option>
+            <option value="MyM Servicios">MyM Servicios</option>
+            <option value="Mi Agro">Mi Agro</option>
+            <option value="Lulu's">Lulu's</option>
+        </select>
+        <label name="asunto">Asunto: </label>
+        <input type="text" name="asunto" id="asunto" required>
+        <label name="mensaje">Mensaje: </label>
+        <textarea name="mensaje" id="mensaje" cols="30" rows="10" required></textarea>
+        <input type="submit" value="Enviar">
+    </form>
+    </article>
+    <footer>
+        <p>Derechos reservados 2025 - NORT3©</p>
+        <p>Email: nort3comunicacion@correo.com</p>
+        <p>Tel: +YYY XXXX-XXXX</p>
+        <p>Km 12 1/2 Carretera a Comasagua, Santa Tecla, 
+            Libertad, El Salvador.</p>
+    </footer>
+</body>
+</html>

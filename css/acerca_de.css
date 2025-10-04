@@ -2,14 +2,19 @@
 @import url("../css/menu.css");
 @import url("../css/main.css");
 
+/* CELULARES */
 /* CONTENIDO: Contenedor principal con las secciones y el pie de página*/
 main {
     position: relative;
-    top: 15vh ;
+    top: 15vh;
 }
 
 main p {
     color: var(--azul-medio);
+}
+
+html {
+    scroll-padding-top: 16vh;
 }
 
 /* QUITA ESTILOS A LOS ENLACES */
@@ -24,18 +29,17 @@ a:active {
     width: 100vw;
     height: 28vh;
     padding: 5% 1%;
-    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 2)), url("../img/presentacion.jpg");
+    background-image: radial-gradient(circle, rgba(35, 41, 69, 0.4) 10%, rgba(29, 36, 68, 0.7) 30%), url("../img/presentacion.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 #presentacion h1 {
     width: 50%;
     background: none;
-    color: var(--azul-oscuro);
+    color: var(--azul-medio);
     text-align: right;
-    font-size: 30px;
+    font-size: 25px;
     margin-left: 45%;
     margin-top: 5%;
     line-height: 1.2;
@@ -80,35 +84,36 @@ a:active {
     flex: 1;
     overflow: auto;
     box-shadow: 1px 5px 8px 0px rgba(11, 50, 94, 0.5), 0px 6px 39px 1px rgba(0, 0, 0, 0.1);
-    
+
 }
 
 #vision-mision article:hover {
     transform: scale(1.06);
-
 
 }
 
 #vision-mision p {
     background: none;
     color: var(--azul-oscuro);
-    padding: 5%;
+    padding: 20px;
 
 }
 
-#vision-mision h2 {
-    padding-left: 20px;
+#vision h2,
+#mision h2 {
+    padding-top: 20px;
+    color: var(--azul-encendido);
 }
 
-#vision-mision img {
-    width: 200px;
-    height: 200px;
+#vision-mision i {
+    font-size: 4em;
     background-color: transparent;
     display: block;
     margin: 0 auto;
-    margin-top: 40px;
-    padding: 10px;
-   
+    margin-top: 20px;
+    padding: 5px 0px;
+    color: var(--blanco-primario);
+
 }
 
 /* EQUIPO: mosaico con la información e imagenes del equipo Nort3 */
@@ -119,12 +124,13 @@ a:active {
 
 #equipo h1 {
     border-bottom: 1px solid var(--azul-medio);
-    
+
 }
 
 #mosaico {
     background-color: var(--azul-medio);
     padding-bottom: 50px;
+    width: 100%;
 
 
 }
@@ -171,14 +177,17 @@ a:active {
 }
 
 #informacion-mosaico {
-    padding: 5%;
+    padding: 25px;
     text-align: center;
 }
 
 #informacion-mosaico p {
     color: var(--azul-oscuro);
-    padding: 20px 0px 10px 0px;
+    padding: 15px;
+    margin: 15px auto;
     text-align: left;
+    border: 1px solid var(--gris-fondos);
+    border-radius: 5px;
 }
 
 #informacion-mosaico p::first-letter {
@@ -188,18 +197,18 @@ a:active {
 
 /* TABLETS */
 @media screen and (min-width:481px) and (max-width:768px) {
-
+  
     #presentacion h1 {
         font-size: 25px;
         margin-top: 7%;
-        
+
     }
 
     #vision-mision article {
         width: 45%;
         height: auto;
         min-height: 300px;
-    
+
     }
 
     #vision-mision {
@@ -214,7 +223,7 @@ a:active {
 
     #vision-mision article:hover {
         transform: scale(1.05);
-       
+
     }
 
 }
@@ -228,7 +237,7 @@ a:active {
     }
 
     #presentacion h1 {
-        font-size: 40px;
+        font-size: 30px;
         width: 45%;
         margin-left: 50%;
         margin-top: 2%;
@@ -301,7 +310,7 @@ a:active {
     #mosaico-derecha {
         gap: 60px;
         align-items: center;
-        
+
     }
 
     .imagen-letra img {
@@ -313,32 +322,12 @@ a:active {
     }
 
     #mosaico-derecha img:hover {
-    transform: scale(1.25)
-}
+        transform: scale(1.25)
+    }
+
     #informacion-mosaico {
-    width: 70%;
-    margin: 0 auto;
+        width: 70%;
+        margin: 0 auto;
+    }
+
 }
-
-/* CELULARES */
-@media screen and (max-width:480px) {
-
-    #presentacion {
-        height: 20vh;
-        padding: 3% 2%;
-    }
-
-    #vision-mision {
-        padding: 3% 3% 5% 3%;
-        height: auto;
-        gap: 25px;
-    }
-
-    #vision-mision article {
-        width: 90%;
-        min-height: 49%;
-        height: auto;
-        padding: 3%;
-    }
-
-}}
