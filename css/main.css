@@ -107,7 +107,6 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
     padding-bottom:35px;
 }
 
-
 /*MOVILES*/
 @media screen and (max-width: 480px){
     header{
@@ -117,6 +116,10 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
         padding: 0 30px;
 
     }
+
+h2{
+    font-size:1.2rem;
+}
 
 #logo{
     width: 20%;
@@ -143,7 +146,7 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
 
 .landing h2{
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
 }
 
 .landing:nth-child(2){
@@ -224,9 +227,14 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
     width: 100%;
 }
 
-footer p{
-    font-size: 12px;
+.landing:last-child{
+    margin-bottom: 20px;
 }
+
+footer p{
+    font-size: 10px;
+}
+
 
 
 }
