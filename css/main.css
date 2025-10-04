@@ -28,15 +28,11 @@ p,li,input{
 
 header{
     width:100%;
-    height:15vh;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 3%;
     position: fixed;
     top: 0;
     z-index: 100;
-    border-bottom: solid 2px var(--gris-fondos);
 }
 
 footer{
@@ -57,7 +53,6 @@ footer p{
 }
 
 article{
-margin-top: 15vh;
 padding: 100px;
 background: #F4F0E3;
 background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175, 1) 100%);
@@ -70,10 +65,29 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
 
 /*Tablets*/
 @media screen and (min-width: 481px) and (max-width: 768px){
+    header{
+        justify-content: space-between;
+        padding: 0 30px;
+        height: 13vh;
+        padding: 3% 3% 0 3% ;
 
+    }
+    article{
+margin-top: 13vh;
+}
 }
 
 /*PC*/
 @media screen and (min-width: 769px){
+    header{
+        justify-content: space-between;
+        height:15vh;
+        border-bottom: solid 2px var(--gris-fondos);
+        padding: 3%;
+    }
+    
+article{
+margin-top: 15vh;
+}
 
 }
