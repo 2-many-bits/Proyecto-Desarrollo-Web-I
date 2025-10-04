@@ -5,7 +5,7 @@ header img{
     display: block;
     margin-right: 10px;
 }
-header > a{
+#inicio{
     font-size: 5vh;
     font-weight: bold;
 }
@@ -14,7 +14,7 @@ header input{
     display: none;
 }
 
-nav ul a{
+header nav ul a{
     transition: all 0.3s ;
 }
 
@@ -28,7 +28,7 @@ nav ul a{
     }
 
     
-    nav ul{
+    header nav ul{
         position:absolute;
         font-size: larger;
         font-weight: bold;
@@ -44,16 +44,16 @@ nav ul a{
     
     }
 
-    nav ul a{
+    header nav ul a{
         height: 70px;
     }
 
 
-label:hover, nav ul a:hover{
+header label:hover, nav ul a:hover{
     color: var(--azul-encendido);
 }
 
-nav ul a:hover{
+header nav ul a:hover{
     margin-left: 10px;
 }
 
@@ -63,6 +63,7 @@ nav ul a:hover{
     background-color: var(--blanco-primario);
     border-radius: 5px;
 }
+
 
 #checkMenu{
     display: none;
@@ -107,7 +108,7 @@ nav ul a:hover{
     }
 
     
-    nav ul{
+    header nav ul{
         position:absolute;
         font-size: larger;
         font-weight: bold;
@@ -120,19 +121,23 @@ nav ul a:hover{
         width: 220px;
         top: 13vh;
         left: -500px;
-    
     }
 
-    nav ul a{
+    header nav ul a{
         height: 70px;
     }
 
-
-label:hover, nav ul a:hover{
+    #inicio{
+        position: absolute;
+        height: 100px;
+        width: 220px;
+        left: -500px;
+    }
+header label:hover, nav ul a:hover, #inicio:hover{
     color: var(--azul-encendido);
 }
 
-nav ul a:hover{
+header nav ul a:hover{
     margin-left: 10px;
 }
 
@@ -150,7 +155,7 @@ nav ul a:hover{
 #btnMostrar{
     position: absolute;;
     left: 20px;
-    top: 13vh;
+    top: 8px;
     font-size: 35px;
     color: var(--azul-oscuro);
     padding: 6px 12px;
@@ -159,14 +164,14 @@ nav ul a:hover{
 #btnOcultar{
     position: absolute;
    left: -200px;
-    top: 13vh;
+    top: 8px;
     font-size: 30px;
     color: var(--azul-oscuro);
     padding: 4px 9px;
      transition: all 0.5s ease;
 }
 
-#checkMenu:checked ~ nav ul{
+#checkMenu:checked ~ nav ul, #checkMenu:checked ~ #inicio{
     left: -20px;
 }
 
