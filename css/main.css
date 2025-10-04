@@ -107,7 +107,6 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
     padding-bottom:35px;
 }
 
-
 /*MOVILES*/
 @media screen and (max-width: 480px){
     header{
@@ -223,6 +222,8 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
     text-align: center;
     width: 100%;
 }
+
+
 
 footer p{
     font-size: 12px;
