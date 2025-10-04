@@ -200,11 +200,13 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 0 auto;
 }
 #equipo .miembro{
     width: 100%;
     margin: 10px auto;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -469,6 +471,7 @@ margin-top: 15vh;
 #equipo .miembro{
     width: 20%;
     margin: 10px auto;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -477,6 +480,7 @@ margin-top: 15vh;
 #equipo .miembro img{
     width: 80%;
     border-radius: 50px;
+    margin: 0 auto;
 }
 
 #equipo .miembro h4{
