@@ -229,8 +229,8 @@ nav ul a{
 }
 
 nav ul a:hover{
-    padding: 2% 0.5vw;
-    color: var(--azul-encendido);
+    color: var(--verde-lima);
+    background: var(--azul-oscuro);
 }
 
 nav ul a:nth-child(6){
@@ -240,7 +240,7 @@ nav ul a:nth-child(6){
     transition: all 0.3s ease;
 }
 
-nav ul a:hover{
+nav ul a:hover:last-child{
     padding: 2% 1vw;
     color: var(--azul-encendido);
 }

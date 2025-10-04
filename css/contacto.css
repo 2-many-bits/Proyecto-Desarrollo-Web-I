@@ -6,6 +6,21 @@ label[name="empresa"], input[type="radio"], section#empresa p{
     display: none;
 }
 
+h1{
+   background: var(--azul-oscuro);
+   color: var(--blanco-primario) 
+}
+h2{
+    text-align: center;
+    background: var(--azul-oscuro);
+    color: var(--blanco-primario);
+    font-weight: 400;
+    padding: 0 20px;
+}
+form{
+    padding: 30px;
+}
+
 
 /*MOVILES*/
 @media screen and (max-width: 480px){
