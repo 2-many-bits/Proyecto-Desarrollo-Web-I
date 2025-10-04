@@ -20,17 +20,16 @@ nav ul a{
 
 /*Moviles*/
 @media screen and (max-width: 480px){
-    header a{
+  header a{
         display: flex;
         justify-content: center;
         align-items: center;
         text-decoration: none;
     }
-    header label{
-        display: none;
-    }
+
+    
     nav ul{
-        position:relative;
+        position:absolute;
         font-size: larger;
         font-weight: bold;
         display: flex;
@@ -38,39 +37,63 @@ nav ul a{
         justify-content: flex-end;
         list-style: none;
         width: 150px;
-        background: none;
+        height: 100vh;
+        width: 220px;
+        top: 13vh;
+        left: -500px;
+    
     }
 
-    .contenido{
-        display: none;
-        position: relative;
-        top: 210px;
-        z-index: 10;
-        width: 170px;
-        height: 70px;
-        background: var(--verde-lima);
-        z-index: 10;;
-    }
-
-    .perfil{
-        position: fixed;
-        top: 3.3vh;
-        z-index: 10;
-        width: 170px;
+    nav ul a{
         height: 70px;
     }
-    
-    nav ul:hover a.contenido{
-        display:flex;
-    }
 
-    .contenido:hover, .perfil:hover{
-        color: var(--azul-encendido);
-        border-left: solid 2px var(--azul-encendido);
-        font-size: large;
-        border-right: solid 2px var(--azul-encendido);
-    }
-    
+
+label:hover, nav ul a:hover{
+    color: var(--azul-encendido);
+}
+
+nav ul a:hover{
+    margin-left: 10px;
+}
+
+#btnMostrar, #btnOcultar{
+    position: absolute;
+    cursor: pointer;
+    background-color: var(--blanco-primario);
+    border-radius: 5px;
+}
+
+#checkMenu{
+    display: none;
+}
+
+#btnMostrar{
+    position: absolute;;
+    left: 20px;
+    top: 13vh;
+    font-size: 35px;
+    color: var(--azul-oscuro);
+    padding: 6px 12px;
+}
+
+#btnOcultar{
+    position: absolute;
+   left: -200px;
+    top: 13vh;
+    font-size: 30px;
+    color: var(--azul-oscuro);
+    padding: 4px 9px;
+     transition: all 0.5s ease;
+}
+
+#checkMenu:checked ~ nav ul{
+    left: -20px;
+}
+
+#checkMenu:checked ~ .labelBotonMenu #btnOcultar{
+    left: 200px;
+}
 }
 
 /*Tablets*/
@@ -82,11 +105,10 @@ nav ul a{
         align-items: center;
         text-decoration: none;
     }
-    header label{
-        display: none;
-    }
+
+    
     nav ul{
-        position:relative;
+        position:absolute;
         font-size: larger;
         font-weight: bold;
         display: flex;
@@ -94,38 +116,63 @@ nav ul a{
         justify-content: flex-end;
         list-style: none;
         width: 150px;
-        background: none;
-    }
-
-    .contenido{
-        display: none;
-        position: relative;
-        top: 210px;
-        z-index: 10;
-        width: 170px;
-        height: 70px;
-        background: var(--verde-lima);
-        z-index: 10;;
-    }
-
-    .perfil{
-        position: fixed;
-        top: 3.3vh;
-        z-index: 10;
-        width: 170px;
-        height: 70px;
-    }
+        height: 100vh;
+        width: 220px;
+        top: 13vh;
+        left: -500px;
     
-    nav ul:hover a.contenido{
-        display:flex;
     }
 
-    .contenido:hover, .perfil:hover{
-        color: var(--azul-encendido);
-        border-left: solid 2px var(--azul-encendido);
-        font-size: large;
-        border-right: solid 2px var(--azul-encendido);
+    nav ul a{
+        height: 70px;
     }
+
+
+label:hover, nav ul a:hover{
+    color: var(--azul-encendido);
+}
+
+nav ul a:hover{
+    margin-left: 10px;
+}
+
+#btnMostrar, #btnOcultar{
+    position: absolute;
+    cursor: pointer;
+    background-color: var(--blanco-primario);
+    border-radius: 5px;
+}
+
+#checkMenu{
+    display: none;
+}
+
+#btnMostrar{
+    position: absolute;;
+    left: 20px;
+    top: 13vh;
+    font-size: 35px;
+    color: var(--azul-oscuro);
+    padding: 6px 12px;
+}
+
+#btnOcultar{
+    position: absolute;
+   left: -200px;
+    top: 13vh;
+    font-size: 30px;
+    color: var(--azul-oscuro);
+    padding: 4px 9px;
+     transition: all 0.5s ease;
+}
+
+#checkMenu:checked ~ nav ul{
+    left: -20px;
+}
+
+#checkMenu:checked ~ .labelBotonMenu #btnOcultar{
+    left: 200px;
+}
 
 }
 
