@@ -60,7 +60,7 @@ header nav ul a{
         position: absolute;
         height: 100px;
         width: 220px;
-        left: -100px;
+        left: -500px;
     }
 header label:hover, nav ul a:hover, #inicio:hover{
     color: var(--azul-encendido);
