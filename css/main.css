@@ -89,7 +89,6 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
 /*Moviles*/
 @media screen and (max-width: 480px){
      header{
-        flex-direction: column;
         align-items: center;
         padding: 0 30px;
         height: 13vh;
@@ -183,6 +182,7 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
 }
 #equipo .miembro{
     width: 100%;
@@ -306,6 +306,7 @@ footer p{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: 0 auto;
 }
 #equipo .miembro{
     width: 45%;
