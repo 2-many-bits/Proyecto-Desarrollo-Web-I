@@ -17,6 +17,17 @@ html {
     scroll-padding-top: 16vh;
 }
 
+/*Ajuste del icono de hamburguesa*/
+#btnMostrar, #btnOcultar {
+    padding: 22px 24px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* QUITA ESTILOS A LOS ENLACES */
 a:active {
     text-decoration: none;
@@ -230,6 +241,7 @@ a:active {
 
 /* COMPUTADORAS */
 @media screen and (min-width:769px) {
+    
     #presentacion {
         height: 35vh;
         padding: 3% 5%;
