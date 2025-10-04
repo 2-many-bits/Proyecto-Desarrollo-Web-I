@@ -180,12 +180,11 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
 
 #equipo{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
 }
 #equipo .miembro{
-    width: 45%;
+    width: 100%;
     margin: 10px auto;
 }
 
