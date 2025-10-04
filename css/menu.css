@@ -223,7 +223,7 @@ nav ul a{
     background: var(--verde-lima);
     padding: 1% 1vw;
     border-radius: 30px;
-    font-size: 16px;
+    font-size: 1rem;
     transition: all 0.3s ease;
     
 }
