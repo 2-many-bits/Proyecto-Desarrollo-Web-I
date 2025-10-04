@@ -146,7 +146,7 @@ h2{
 
 .landing h2{
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
 }
 
 .landing:nth-child(2){
@@ -227,11 +227,14 @@ h2{
     width: 100%;
 }
 
-
+.landing:last-child{
+    margin-bottom: 20px;
+}
 
 footer p{
-    font-size: 12px;
+    font-size: 10px;
 }
+
 
 
 }
