@@ -1,3 +1,6 @@
+/*Hoja de estilo para los menus*/
+
+/*ESTILOS GENERALES*/
 header img{
     width: 50px;
     height: 50px;
@@ -18,7 +21,7 @@ header nav ul a{
     transition: all 0.3s ;
 }
 
-/*Moviles*/
+/*MOVILES*/
 @media screen and (max-width: 480px){
     header a{
         display: flex;
@@ -57,7 +60,7 @@ header label:hover, nav ul a:hover, #inicio:hover{
     color: var(--azul-encendido);
 }
 
-header nav ul a:hover{
+header nav ul a:hover, #inicio:hover{
     margin-left: 10px;
 }
 
@@ -100,7 +103,7 @@ header nav ul a:hover{
 }
 }
 
-/*Tablets*/
+/*TABLETS*/
 @media screen and (min-width: 481px) and (max-width: 768px){
 
     header a{
@@ -140,7 +143,7 @@ header label:hover, nav ul a:hover, #inicio:hover{
     color: var(--azul-encendido);
 }
 
-header nav ul a:hover{
+header nav ul a:hover, #inicio:hover{
     margin-left: 10px;
 }
 

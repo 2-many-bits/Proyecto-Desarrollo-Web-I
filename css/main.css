@@ -1,8 +1,15 @@
-/*Importar fuentes de Google Fonts*/
+/*
+Hoja de estilo base para todas las páginas y para la página de inicio
+*/
+
+/*FUENTES DE GOOGLE FONTS*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+/*
+VARIABLES PARA LOS COLORES
+*/
 :root {
     --blanco-primario: #f4f0e3;
     --blanco-secundario: #ECECE5;
@@ -12,6 +19,8 @@
     --verde-lima: #d1d871;
     --gris-fondos: #C7C3AF;
 }
+
+/*ESTILO BASE PARA TODAS LAS PAGINAS*/
 *{
     margin: 0;
     padding: 0;
@@ -58,6 +67,8 @@ background: #F4F0E3;
 background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175, 1) 100%);
 }
 
+/*ESTILO GENERAL LANDING*/
+
 .landing .btn, input[type="submit"]{
     background: var(--verde-lima);
     margin: 20px auto 0;
@@ -88,7 +99,7 @@ background: linear-gradient(0deg, rgba(244, 240, 227, 1) 59%, rgba(199, 195, 175
 
 
 
-/*Moviles*/
+/*MOVILES*/
 @media screen and (max-width: 480px){
     header{
         flex-direction: column;
@@ -209,7 +220,7 @@ footer p{
 
 }
 
-/*Tablets*/
+/*TABLETS*/
 @media screen and (min-width: 481px) and (max-width: 768px){
     header{
         flex-direction: column;
