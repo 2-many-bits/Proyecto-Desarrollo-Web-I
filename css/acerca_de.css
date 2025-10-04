@@ -4,10 +4,6 @@
 
 /* CELULARES */
 /* CONTENIDO: Contenedor principal con las secciones y el pie de página*/
-main {
-    position: relative;
-    top: 15vh;
-}
 
 main p {
     color: var(--azul-medio);
@@ -18,7 +14,8 @@ html {
 }
 
 /*Ajuste del icono de hamburguesa*/
-#btnMostrar, #btnOcultar {
+#btnMostrar,
+#btnOcultar {
     padding: 22px 24px;
     text-align: center;
     width: 40px;
@@ -208,7 +205,11 @@ a:active {
 
 /* TABLETS */
 @media screen and (min-width:481px) and (max-width:768px) {
-  
+
+    main {
+        top: 0;
+    }
+
     #presentacion h1 {
         font-size: 25px;
         margin-top: 7%;
@@ -241,7 +242,11 @@ a:active {
 
 /* COMPUTADORAS */
 @media screen and (min-width:769px) {
-    
+    main {
+        position: relative;
+        top: 15vh;
+    }
+
     #presentacion {
         height: 35vh;
         padding: 3% 5%;
