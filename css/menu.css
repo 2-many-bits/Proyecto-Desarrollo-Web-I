@@ -233,7 +233,7 @@ nav ul a:hover{
     background: var(--azul-oscuro);
 }
 
-nav ul a:nth-child(6){
+nav ul a:nth-child(7){
     background: var(--blanco-primario);
     border-left: solid 2px var(--gris-fondos);
     border-radius: 0;

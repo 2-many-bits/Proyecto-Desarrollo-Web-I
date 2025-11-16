@@ -1,0 +1,176 @@
+body {
+   margin-top: 15vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   height: 85vh;
+}
+
+/* FILAS Y COLUMNAS */
+.columna {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+/* BOTONES EN GENERAL */
+.btn {
+    border: none;
+    background-color: var(--verde-lima);
+    padding:10px 12px;
+    border-radius: 5px;
+    transition: all 0.25s;
+}
+
+.btn:hover {
+    background-color: var(--azul-oscuro);
+    color: var(--verde-lima);
+}
+
+.btn:active {
+    scale: 1.025;
+    box-shadow: 0px 2px 28px -5px rgba(0,0,0,0.43);
+}
+
+/* ICONOS */
+i {
+    background-color: transparent;
+    font-size: 1rem;
+    margin: 2px;
+}
+
+.btn:hover i {
+    color: var(--verde-lima);
+}
+
+/* CONTENEDOR */
+.contenedor {
+    background-color: var(--blanco-secundario);
+    height: 80vh;
+    padding: 8px;
+    margin: 1.5% 0;
+    border-radius: 5px;
+    border: solid 2px var(--gris-fondos);
+    box-shadow: 0px 2px 28px 1px rgba(0,0,0,0.43);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* COMPONENTES ENCABEZADO */
+.encabezado {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:80vw;
+    background-color: transparent;
+}
+
+.encabezado h2 {
+    line-height: 1.6rem;
+    padding: 10px 5px;
+    background: transparent;
+}
+
+.encabezado h2 small {
+    font-size: 0.7em;
+    font-family: montserrat, sans-serif;
+    line-height: 0.4em;
+    font-weight: normal;
+    font-style: italic;
+    background: transparent;
+}
+
+.encabezado button {
+    align-self: baseline;
+    margin-top: 0.6rem;
+}
+
+.encabezado button i {
+    margin-right: 5px;
+}
+
+/* CONTENIDO INTERNO */
+#contenidoChat {
+    height: 50vh;
+    overflow-y: auto;
+    width:80vw;
+    background-color: transparent;
+}
+
+#contenidoChat::-webkit-scrollbar {
+    width:10px;
+    padding: 3px;
+}
+
+#contenidoChat::-webkit-scrollbar-track {
+    background: var(--gris-fondos);
+    border-radius: 5px;
+}
+
+#contenidoChat::-webkit-scrollbar-thumb {
+    background-color: var(--azul-medio);
+    border-radius: 5px;
+}
+
+#contenidoChat::-webkit-scrollbar-thumb:hover {
+    background-color: var(--azul-encendido);
+}
+
+/* ESTILOS PARA BARRA DE TEXTO */
+.barraTxt {
+    height: 15vh;
+    width: 80vw;
+    margin: 1vh 1vw;
+    padding: 5px 15px 5px 5px;
+    background-color: var(--blanco-primario);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.barraTxt textarea {
+    padding: 20px 5px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 15vh;
+    text-align: left;
+    vertical-align: top;
+    resize: none;
+    overflow-y: auto;
+    font-size: 1.4rem;
+    font-family: montserrat, sans-serif;
+    flex-grow: 1;
+}
+
+.barraTxt textarea::-webkit-scrollbar {
+    width:10px;
+    margin: 2.5px;
+}
+
+.barraTxt textarea::-webkit-scrollbar-track {
+    background: var(--gris-fondos);
+    border-radius: 5px;
+}
+
+.barraTxt textarea::-webkit-scrollbar-thumb {
+    background-color: var(--azul-medio);
+    border-radius: 5px;
+}
+
+.barraTxt textarea::-webkit-scrollbar-thumb:hover {
+    background-color: var(--azul-oscuro);
+}
