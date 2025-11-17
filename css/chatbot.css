@@ -104,9 +104,14 @@ i {
 /* CONTENIDO INTERNO */
 #contenidoChat {
     height: 50vh;
+    max-height: 50vh;
     overflow-y: auto;
     width:80vw;
     background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 #contenidoChat::-webkit-scrollbar {
@@ -126,6 +131,32 @@ i {
 
 #contenidoChat::-webkit-scrollbar-thumb:hover {
     background-color: var(--azul-encendido);
+}
+
+.interaccion {
+    width: auto;
+    max-width: 60vw;
+    background-color: var(--blanco-primario);
+    margin: 10px 5px;
+}
+
+.interaccion p {
+    color:var(--azul-oscuro);
+}
+
+.interaccion:nth-child(2n+1) {
+    border-radius: 10px 10px 0 10px;
+    align-self: flex-end;
+    padding: 20px 20px 20px 10px;
+}
+
+.interaccion:nth-child(2n) {
+    border-radius: 10px 10px 10px 0;
+    padding: 20px 5px 20px 20px;
+}
+
+.interaccion:nth-child(2n+1) p {
+    text-align: right;
 }
 
 /* ESTILOS PARA BARRA DE TEXTO */
