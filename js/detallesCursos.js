@@ -82,3 +82,17 @@ async function probarFuncionesCRUD() {
 document.addEventListener('DOMContentLoaded', () => {
     probarFuncionesCRUD();
 });
+
+// Flujo de cursos:
+/*
+1. Obtener todos los cursos
+2. Mostrarlos en la galería de cursos (en el selector CSS con id #cursos)
+3. Al seleccionar un curso, cargar la página plantilla "detallesCursos.html" y llenarla con la información del curso respectivo, obteniendo los datos del documento dentro de la base de datos de firestore.
+4. Al dar clic sobre el botón "Inscribirse ahora", ocurrirá lo siguiente:
+    a. Se redirigirá al usuario a la página "mis_cursos.html"
+    b. Se agregará el curso a la lista de cursos del usuario
+    c. Se mostrará un mensaje de confirmación
+    d. Se agregará el curso a la lista de cursos del usuario en la base de datos de firestore
+    e. Dado que el curso ahora está en la base de datos del usuario, cuando el usuario vuelva a ingresar a la página de "Cursos", entonces el curso inscrito ya no aparecerá en la galería de cursos.
+5. Al dar clic sobre uno de los cursos en "Mis cursos", se redirigirá al usuario a la página plantilla "contenidoCursos.html" y se llenará con la información del curso respectivo, obteniendo los datos del documento dentro de la base de datos de firestore. Dado que todos los cursos contienen módulos de aprendizaje, cuándo el usuario ingrese a la página "contenidoCursos.html", se mostrará la lista de módulos de aprendizaje disponibles para el curso seleccionado (deberán incluirse indicadores de progreso como barras de progreso, etiquetas de estado y botones para iniciar el módulo de aprendizaje, el cuál consistirá en un cuestionario que el usuario deberá responder para completar el módulo de aprendizaje).
+*/
