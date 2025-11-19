@@ -69,7 +69,7 @@ h4, p,i, .encabezado-aviso, .detalles-aviso, span{
 #avisos-destacados h2,
 #avisos-recientes h2 {
     font-size: 2rem;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     color: var(--azul-oscuro);
     border-bottom: 3px solid var(--azul-medio);
     padding-bottom: 10px;
@@ -77,18 +77,27 @@ h4, p,i, .encabezado-aviso, .detalles-aviso, span{
 
 .contenedor-avisos {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: flex-start;
 }
 
 /* TARJETAS DE AVISOS  */
 .tarjeta-aviso {
-    background-color: white;
+    flex: 1 1 auto; 
+    max-width: 100%; 
+    min-width: 280px; 
+    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); 
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     border-left: 4px solid var(--azul-medio);
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+    margin-top: 3%;
 }
 
 .tarjeta-aviso:hover {
@@ -126,7 +135,7 @@ h4, p,i, .encabezado-aviso, .detalles-aviso, span{
     color: #1976d2;
 }
 
-.etiqueta.cursos {
+.etiqueta.actualizacions {
     background-color: #f3e5f5;
     color: #7b1fa2;
 }
@@ -136,7 +145,7 @@ h4, p,i, .encabezado-aviso, .detalles-aviso, span{
     color: #f57c00;
 }
 
-.etiqueta.oportunidades {
+.etiqueta.oportunidads {
     background-color: #e8f5e9;
     color: #388e3c;
 }
@@ -155,6 +164,8 @@ h4, p,i, .encabezado-aviso, .detalles-aviso, span{
     color: var(--azul-oscuro);
     margin-bottom: 12px;
     line-height: 1.3;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
 }
 
 /* Descripción del aviso */
@@ -163,6 +174,8 @@ h4, p,i, .encabezado-aviso, .detalles-aviso, span{
     line-height: 1.6;
     margin-bottom: 15px;
     font-size: 1rem;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
 }
 
 /* Detalles adicionales */
@@ -187,17 +200,19 @@ h4, p,i, .encabezado-aviso, .detalles-aviso, span{
     color: var(--azul-encendido);
 }
 
-/* Botón "Ver más" */
+/* Boton "Ver mas" */
 .btn-ver-mas {
     display: inline-block;
     background-color: var(--verde-lima);
     color: var(--azul-oscuro);
-    padding: 5px 20px;
+    padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     box-shadow: 0px 0px 50px -15px var(--azul-medio);
     transition: all 0.3s ease;
+    align-self: flex-start; 
+    margin-top: auto;
 }
 
 .btn-ver-mas:hover {
@@ -271,14 +286,8 @@ h4, p,i, .encabezado-aviso, .detalles-aviso, span{
         font-size: 1.3rem;
     }
 
-    .contenedor-avisos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    #avisos-destacados .contenedor-avisos {
-        grid-template-columns: 1fr;
+    .tarjeta-aviso {
+        flex: 1 1 calc(48% - 10px); 
     }
 
     .tarjeta-aviso h3 {
@@ -289,7 +298,6 @@ h4, p,i, .encabezado-aviso, .detalles-aviso, span{
 /*  PC  */
 @media screen and (min-width: 769px) {
     
-    /* Ajusta el scroll al espacio del menu superior*/
     main   {
         position: relative;
         top: 15vh;
@@ -330,18 +338,9 @@ h4, p,i, .encabezado-aviso, .detalles-aviso, span{
         font-size: 2.5rem;
     }
 
-    .contenedor-avisos {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-    }
-
-    #avisos-destacados .contenedor-avisos {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .tarjeta-aviso {
+     .tarjeta-aviso {
         padding: 25px;
+        flex: 1 1 calc(31% - 14px);
     }
 
     .tarjeta-aviso h3 {
