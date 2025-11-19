@@ -97,17 +97,18 @@ export async function actualizarCurso(cursoId, cursoData){
 	}
 }
 
-/**
- * Borra un curso de la base de datos.
- * @param {string} cursoId - El ID del curso a borrar.
- */
-export async function borrarCurso(cursoId){
-	try {
-		const docRef = doc(db, COLLECTION_NAME, cursoId);
-		await deleteDoc(docRef);
-		return {success: true}
-	} catch (error) {
-        console.error(`Error al borrar el curso con ID ${cursoId}:`, error);
-		return {success: false, error: error.message}
-	}
-}
+// No se debería de utilizar
+// /**
+//  * Borra un curso de la base de datos.
+//  * @param {string} cursoId - El ID del curso a borrar.
+//  */
+// export async function borrarCurso(cursoId){
+// 	try {
+// 		const docRef = doc(db, COLLECTION_NAME, cursoId);
+// 		await deleteDoc(docRef);
+// 		return {success: true}
+// 	} catch (error) {
+//         console.error(`Error al borrar el curso con ID ${cursoId}:`, error);
+// 		return {success: false, error: error.message}
+// 	}
+// }
