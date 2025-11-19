@@ -1,0 +1,16 @@
+@import url("../bootstrap/icons/bootstrap-icons.css");
+body {
+    background-color: #f4f0e3;
+}
+
+i {
+    color:#232945;
+    margin: 3px;
+    padding: 2px;
+}
+
+#idIconLogin {
+    color: #f4f0e3;
+    margin: 0;
+    padding: 2px 3px;
+}
