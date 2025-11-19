@@ -8,6 +8,7 @@ header img{
     display: block;
     margin-right: 10px;
 }
+
 #inicio{
     font-size: 5vh;
     font-weight: bold;
@@ -35,8 +36,10 @@ header nav ul a{
         align-items: center;
         text-decoration: none;
     }
+    header, .labelBotonMenu{
+        background: none;
+    }
 
-    
     header nav ul{
         position:absolute;
         font-size: larger;
@@ -48,7 +51,7 @@ header nav ul a{
         width: 150px;
         height: 100vh;
         width: 220px;
-        top: 13vh;
+        top: 100px;
         left: -500px;
     }
 
@@ -118,8 +121,9 @@ header nav ul a:hover{
         align-items: center;
         text-decoration: none;
     }
-
-    
+     header, .labelBotonMenu{
+        background: none;
+    }
     header nav ul{
         position:absolute;
         font-size: larger;
@@ -131,7 +135,7 @@ header nav ul a:hover{
         width: 150px;
         height: 100vh;
         width: 220px;
-        top: 13vh;
+        top: 100px;
         left: -500px;
     }
 

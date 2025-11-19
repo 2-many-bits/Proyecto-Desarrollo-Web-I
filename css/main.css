@@ -47,7 +47,7 @@ header{
 
 footer{
     width:100%;
-    height:15vh;
+    height:17vh;
     background-color: var(--azul-oscuro);
     padding: 1vh;
     display: flex;
