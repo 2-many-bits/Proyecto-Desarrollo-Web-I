@@ -1,4 +1,4 @@
-import { loginUser } from "./firebase/firebase_config.js";
+import { loginUser } from "./firebase/firebaseConfig.js";
 
 const inputTxtEmail = document.getElementById("idTxtCorreo");
 const inputTxtPassword = document.getElementById("idTxtContrasenia");
