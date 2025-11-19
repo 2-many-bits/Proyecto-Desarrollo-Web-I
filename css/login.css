@@ -1,0 +1,36 @@
+@import url("../bootstrap/icons/bootstrap-icons.css");
+body {
+    background-color: #f4f0e3;
+}
+
+i {
+    color:#232945;
+    margin: 3px;
+    padding: 2px;
+}
+
+#idIconLogin {
+    color: #232945;
+    margin: 0;
+    padding: 2px 3px;
+}
+
+.btn-primary {
+    color: #232945;
+    background-color: #d1d871;
+    font-weight: bold;
+    height: 50px;
+    border: solid 1px #d1d871;
+}
+
+.btn-primary:hover {
+    color: #d1d871;
+    background-color: #232945;
+    border-color: #232945;
+}
+
+.btn-primary:hover #idIconLogin{
+    color:#d1d871;
+    margin: 0;
+    padding: 3px;
+}

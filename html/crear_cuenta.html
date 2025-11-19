@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/crear_cuenta.css" />
+    <title>NORT3 - Crear cuenta</title>
+</head>
+<body>
+    <div class="container-lg justify-content-center align-items-center my-3 px-5 py-3">
+        <div class="col-10 offset-1 bg-light rounded-5 shadow pt-5">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-8 align-items-center justify-content-center">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-12 col-lg-4 justify-content-center align-items-center">
+                            <img src="../img/Nort3_Logo_Icono_sinFondo.png" class="img-fluid h-auto"
+                            alt="Logo de Nort3">
+                        </div>
+                        <div class="col-12 col-lg-8  text-center text-lg-start">
+                            <h1 class="display-4 fw-bold">
+                                Crear cuenta
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <form class="needs-validation my-2" novalidate id="registerForm">
+                        <fieldset>
+                            <legend class="display-6 fs-2 my-md-3 mb-4 text-center text-md-start">Información personal</legend>
+                            <div class="form-floating">
+                                <input type="text" id="idTxtNombre" class="form-control"
+                                placeholder="" required>
+                                <label for="idTxtNombre">
+                                    <i class="bi bi-person-fill"></i> Nombre completo
+                                </label>
+                                <div class="invalid-feedback">
+                                    Debes incluir 1 nombre o apellido
+                                </div>
+                            </div>
+                            <div class="form-floating mt-3">
+                                <input type="password" id="idTxtPassword" 
+                                class="form-control" placeholder="" required>
+                                <label for="idTxtPassword">
+                                    <i class="bi bi-key"></i> Contraseña
+                                </label>
+                                <div class="invalid-feedback">
+                                    Debe ser de al menos 8 caracteres, contener 1 mayúscula y una minúscula
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mt-3">
+                                <div class="col-md-5">
+                                    <div class="form-floating">
+                                        <input type="date" id="idTxtFechaNacimiento" class="form-control"
+                                        placeholder="" pattern="\d{2}-\d{2}-\d{4}" required>
+                                        <label for="idTxtFechaNacimiento">
+                                            <i class="bi bi-calendar-plus"></i> Fecha de nacimiento
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            No es una fecha válida
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-7 my-3 my-md-0 d-flex align-items-center justify-content-center gap-md-3">
+                                    <h4 class="fs-6 fw-normal px-3">Sexo:</h4> 
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="rdSexo" id="idRdMasculino"
+                                        value="masculino" required>
+                                        <label for="idRdMasculino">Hombre</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="rdSexo" id="idRdFemenino"
+                                        value = "femenino" required>
+                                        <label for="idRdFemenino">Mujer</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-floating mt-3">
+                                <textarea name="txtDireccion" id="idTxtDireccion" class="form-control"
+                                placeholder="" required></textarea>
+                                <label for="idTxtDireccion">
+                                    <i class="bi bi-geo-alt-fill"></i> Dirección
+                                </label>
+                                <div class="invalid-feedback">
+                                    Debes colocar una dirección
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="display-6 fs-2 my-md-3 mt-4 text-center text-md-start">Información de contacto</legend>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating mt-2">
+                                        <input type="email" id="idTxtCorreo" placeholder="" 
+                                        class="form-control" required>
+                                        <label for="idTxtCorreo">
+                                            <i class="bi bi-envelope-paper-fill"></i> Correo electrónico
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            El correo tiene un formato inválido
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mt-2">
+                                        <input type="tel" id="idTxtTelefono" placeholder=""
+                                        class="form-control" required>
+                                        <label for="idTxtTelefono">
+                                            <i class="bi bi-telephone-plus-fill"></i> Teléfono
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            No es un teléfono válido
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-floating mt-3">
+                                <input type="text" id="idTxtLinkedIn" placeholder=""
+                                class="form-control" required>
+                                <label for="idTxtLinkedIn">
+                                    <i class="bi bi-linkedin"></i> LinkedIn
+                                </label>
+                                <div class="invalid-feedback">
+                                    No es un usuario válido
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="display-6 fs-2 my-md-3 mt-4 text-center text-md-start">Detalles Laborales</legend>
+                            <div class="form-floating mt-3">
+                                <input type="text" id="idTxtEmpresa" placeholder=""
+                                class="form-control" required>
+                                <label for="idTxtEmpresa">
+                                    <i class="bi bi-building"></i> Empresa
+                                </label>
+                                <div class="invalid-feedback">
+                                    No es un nombre de empresa válido
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating mt-3">
+                                        <input type="text" id="idTxtPuestoLaboral" placeholder="" 
+                                        class="form-control" required>
+                                        <label for="idTxtPuestoLaboral">
+                                            <i class="bi bi-briefcase-fill"></i> Puesto Laboral
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Debes llenar este campo con texto sin símbolos o números
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mt-3">
+                                        <input type="date" id="idTxtFechaContratacion" placeholder=""
+                                        class="form-control" pattern="\d{2}-\d{2}-\d{4}" required>
+                                        <label for="idTxtFechaContratacion">
+                                            <i class="bi bi-calendar-date-fill"></i> Fecha de contratación
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            No es una fecha válida
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="row mt-3">
+                            <div class="col-12 d-flex justify-content-center">
+                                <button type = "submit" class="btn btn-primary" id="btnCrearCuenta">
+                                    Crear cuenta
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row text-center mt-3">
+                <div class="col-12 px-5">
+                    <p>¿Ya tienes una cuenta? <a href="../html/login.html">Inicia sesión aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../js/crearUsuario.js" type="module"></script>
+</body>
+</html>
