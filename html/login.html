@@ -23,7 +23,7 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-6">
-                            <form class="needs-validation" novalidate>
+                            <form class="needs-validation" novalidate id="loginForm">
                                 <div class="form-floating my-4">
                                     <input type="email" placeholder="" class="form-control"
                                     id = "idTxtCorreo">
@@ -44,16 +44,16 @@
                                         Contraseña incorrecta
                                     </div>
                                 </div>
+                                <div class="row justify-content-center mt-3">
+                                    <div class="col-md-12">
+                                        <div class="row justify-content-center px-5">
+                                            <button type="submit" class="btn btn-primary" id="login">
+                                                <i class="bi bi-box-arrow-right" id="idIconLogin"></i> Iniciar sesión
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </form>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center mt-3">
-                        <div class="col-md-4">
-                            <div class="row justify-content-center px-5">
-                                <button type="button" class="btn btn-primary" id="login">
-                                    <i class="bi bi-box-arrow-right" id="idIconLogin"></i> Iniciar sesión
-                                </button>
-                            </div>
                         </div>
                     </div>
                     <div class="row text-center align-middle mt-4">
@@ -65,6 +65,7 @@
             </div>
         </div>
     </div>
-<script src="../bootstrap/js/bootstrap.bundle.min.js"></script> 
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../js/login.js" type="module"></script>
 </body>
 </html>
