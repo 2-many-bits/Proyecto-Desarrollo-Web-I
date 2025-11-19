@@ -6,27 +6,54 @@ label[name="empresa"], input[type="radio"], section#empresa p{
     display: none;
 }
 
+label{
+    padding: 0 0 15px 7px;
+}
+article{
+    background: var(--gris-fondos);
+}
+
+
 h1{
    background: var(--azul-oscuro);
-   color: var(--blanco-primario) 
+   color: var(--blanco-primario);
+   padding: 0;
+   margin: 0 auto;
+   border-radius: 20px 20px 0 0 ;
+   text-align: center;
 }
 h2{
     text-align: center;
     background: var(--azul-oscuro);
     color: var(--blanco-primario);
     font-weight: 400;
+    margin: 0 auto;
     padding: 0 20px;
 }
 form{
     padding: 30px;
+    border-radius: 0 0 20px 20px ;
 }
+form section{
+    width: 100%;
+    margin: 0 auto;
+}
+input[type="text"],textarea,input[type="email"], select, select option{
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: montserrat, sans-serif;
+    font-size: 1rem;
+}
+
 
 
 /*MOVILES*/
 @media screen and (max-width: 480px){
-        h1{
+    h1{
         font-size: 3rem;
         text-align: center;
+        border-radius: 0;
     }
     h2{
     text-align: center;
@@ -40,13 +67,13 @@ form {
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
+    border-radius: 0px;
 }
 form section{
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
 }
 
 form section label, form section input, form p{
@@ -60,7 +87,6 @@ input[type="submit"]{
 }
 
 textarea, select, select option{
-    font-size: 1.2rem;
     color: var(--azul-oscuro);
 }
     
@@ -80,7 +106,8 @@ form {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    align-content: center;
 }
 form section{
     padding: 10px;
@@ -97,7 +124,6 @@ input[type="submit"]{
 }
 
 textarea, select, select option{
-    font-size: 1.2rem;
     color: var(--azul-oscuro);
 }
 
@@ -107,8 +133,12 @@ textarea, select, select option{
       h1{
         font-size: 3.5rem;
         text-align: center;
+        width: 60%;
+        margin: 0 auto;
     }
     h2{
+    width: 60%;
+    margin: 0 auto;
     text-align: center;
     font-size: 2.5rem;
     padding-bottom: 20px;
@@ -119,46 +149,28 @@ form {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    width: 100%;
+    width: 60%;
 }
 form section{
-    padding: 10px;
-}
-
-
-form section label, form section input, form p{
-    font-size: 1.5rem;
-    color: var(--azul-oscuro);
-}
-
-
-
-input[type="text"],textarea,input[type="email"], select{
-    width: 50vw;
-}
-
-section#empresa{
-    width:50vw;
+    margin: 0 auto;
+    padding: 10px ;
     display: flex;
-}
-label[name="empresa"]{
-    padding-right: 40px;
+    flex-direction: column;
+    align-items: flex-start;;
 }
 
-#empresa p{
-    padding-right: 40px;
-}
-form section label, form section input, form p{
-    font-size: 1.2rem;
-    color: var(--azul-oscuro);
-}
 
 input[type="submit"]{
     font-size: 1.5rem;
     width: 100px;
 }
 
-textarea, select, select option{
+input[type="text"], input[type="email"], textarea, select, select option{
+    font-size: 1.2rem;
+    color: var(--azul-oscuro);
+}
+label{
+    padding: 0 0 5px 7px;
     font-size: 1.2rem;
     color: var(--azul-oscuro);
 }
