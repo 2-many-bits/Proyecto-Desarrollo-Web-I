@@ -82,5 +82,3 @@ async function probarFuncionesCRUD() {
 document.addEventListener('DOMContentLoaded', () => {
     probarFuncionesCRUD();
 });
-
-//
