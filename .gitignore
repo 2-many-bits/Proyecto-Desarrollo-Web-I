@@ -1,0 +1,5 @@
+# Ignorar configuración de Firebase
+firebase_config.js
+
+# Ignorar archivos temporales
+*.log

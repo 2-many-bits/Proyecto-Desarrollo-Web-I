@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/login.css">
+    <title>NORT3 - Iniciar sesión</title>
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="col-12">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 bg-light rounded-3 px-3 py-5 mt-4 shadow">
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            <img src="../img/Nort3_Logo_Icono_sinFondo.png" class="img-fluid rounded-3" 
+                            alt="Logo Nort3">
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <h1 class="h1 5rem text-center">Iniciar sesión</h1>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <form class="needs-validation" novalidate id="loginForm">
+                                <div class="form-floating my-4">
+                                    <input type="email" placeholder="" class="form-control"
+                                    id = "idTxtCorreo">
+                                    <label for="idTxtCorreo px-6">
+                                        <i class="bi bi-envelope-check-fill"></i> Correo
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        Por favor, ingresa un correo válido
+                                    </div>
+                                </div>
+                                <div class="form-floating my-4">
+                                    <input type="password" placeholder="" class="form-control"
+                                    id = "idTxtContrasenia">
+                                    <label for="idTxtContrasenia">
+                                        <i class="bi bi-shield-fill"></i> Contraseña
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        Contraseña incorrecta
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center mt-3">
+                                    <div class="col-md-12">
+                                        <div class="row justify-content-center px-5">
+                                            <button type="submit" class="btn btn-primary" id="login">
+                                                <i class="bi bi-box-arrow-right" id="idIconLogin"></i> Iniciar sesión
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row text-center align-middle mt-4">
+                        <p>
+                            ¿Aún no tienes una cuenta? <a href="../html/crear_cuenta.html">Crea una aquí</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../js/login.js" type="module"></script>
+</body>
+</html>
