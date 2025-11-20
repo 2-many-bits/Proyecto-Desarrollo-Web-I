@@ -1,5 +1,5 @@
 import {obtenerTodosLosCursos} from './detallesCursosServices.js';
-import {getCurrentUserId, getUser} from './firebase/firebaseConfig.js';
+import {getCurrentUserId, getUser} from './firebase/firebase_config.js';
 
 const contenedor = document.getElementById("tarjetas");
 
