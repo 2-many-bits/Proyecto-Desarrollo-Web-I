@@ -1,5 +1,5 @@
 // Importar la conexión a Firebase (db es la database)
-import { db } from "./avisos_firebase.js";
+import { db } from "././firebase/avisos_firebase.js";
 
 //  Importar funciones de Firestore que necesitamos
 import { addDoc,
@@ -7,7 +7,7 @@ import { addDoc,
     serverTimestamp, query, orderBy, getDocs, getDoc, updateDoc, deleteDoc, doc
  } from 'https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js'; 
 
- 
+
 
 // Coleccion de avisos
 const COLLECTION_NAME = 'avisos';
