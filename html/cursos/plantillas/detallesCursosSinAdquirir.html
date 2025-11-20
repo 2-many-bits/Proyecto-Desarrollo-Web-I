@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NORT3 - {Nombre del curso}</title>
+	<link rel="stylesheet" href="../../../css/main.css">
+	<link rel="stylesheet" href="../../../css/menu.css">
+	<link rel="stylesheet" href="../../../css/paginas_cursos.css">
+	<!--RECURSO PARA ICONOS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <header>
+        <input type="checkbox" name="checkMenu" id="checkMenu">
+        
+        <label for="checkMenu" class="labelBotonMenu">
+        <i class="fa fa-navicon" id="btnMostrar"></i>
+        <i class="fa fa-remove" id="btnOcultar"></i>
+        </label>  
+        
+        <a href="../../../index.html" id="inicio"> 
+            <img src="../../../img/Nort3_Logo_Icono_sinFondo.png" 
+            alt="Logo NORT3">NORT3</a>
+              
+        <nav>
+            <ul>
+                    <a href="../../../cursos.html" class="contenido">Cursos</a>
+                    <a href="../../../mis_cursos.html" class="contenido">Mis Cursos</a>
+                    <a href="../../../avisos_comunidad.html" class="contenido">Avisos</a>
+                    <a href="../../../acerca_de.html" class="contenido">Nosotros</a>
+                    <a href="../../../contacto.html" class="contenido">Contacto</a>
+                    <a href="../../../perfil.html" class="perfil">
+                        <img src="../../../img/foto_perfil.jpg" alt="">
+                        Emanuel Rivas</a>
+                
+            </ul>
+        </nav>
+    </header>
+<main class="contenedor">
+
+	<!-- Columna principal con la información del curso -->
+	<article id="curso-detalles">
+		<!-- ================= INICIO DE CONTENIDO_CURSO.HTML ================= -->
+		<section id="curso-resumen">
+			<span class="curso-tag-categoria">{Categoria}</span>
+			<h1>{Nombre del curso}</h1>
+			<p id="curso-descripcion">
+				{Descripcion del curso}
+			</p>
+		</section>
+
+		<section class="card" id="curso-aprendizajes">
+			<h2>Lo que aprenderás</h2>
+			<ul id="curso-aprendizajes-lista">
+				<li>
+					<span><i class="fa fa-check icon-check"></i>{Aprendizaje 1}</span>
+				</li>
+				<li>
+					<span><i class="fa fa-check icon-check"></i>{Aprendizaje 2}</span>
+				</li>
+				<li>
+					<span><i class="fa fa-check icon-check"></i>{Aprendizaje 3}</span>
+				</li>
+				<li>
+					<span><i class="fa fa-check icon-check"></i>{Aprendizaje 4}</span>
+				</li>
+			</ul>
+		</section>
+
+		<section class="card" id="curso-prerrequisitos">
+			<h2>Prerrequisitos</h2>
+			<ul>
+				<li>{Prerrequisito 1}</li>
+				<li>{Prerrequisito 2}</li>
+				<li>{Prerrequisito 3}</li>
+			</ul>
+		</section>
+
+		<section class="card" id="curso-modulos">
+			<h2>Contenido del curso</h2>
+			<div class="modulos-dropdown">
+				<details class="dropdown-elemento">
+					<summary class="modulo-titulo">
+						<span>Módulo 1: Introducción a la Logística de Última Milla</span>
+					</summary>
+					<div class="modulo-contenido">
+						<ul>
+							<li>{Modulo 1 - Aprendizaje 1}</li>
+							<li>{Modulo 1 - Aprendizaje 2}</li>
+							<li>{Modulo 1 - Aprendizaje 3}</li>
+							<li>{Modulo 1 - Aprendizaje 4}</li>
+						</ul>
+					</div>
+				</details>
+				<details class="dropdown-elemento">
+					<summary class="modulo-titulo">
+						<span>Módulo 2: Gestión de Envíos con Boxful</span>
+					</summary>
+					<div class="modulo-contenido">
+						<ul>
+							<li>{Modulo 2 - Aprendizaje 1}</li>
+							<li>{Modulo 2 - Aprendizaje 2}</li>
+							<li>{Modulo 2 - Aprendizaje 3}</li>
+							<li>{Modulo 2 - Aprendizaje 4}</li>
+						</ul>
+					</div>
+				</details>
+				<details class="dropdown-elemento">
+					<summary class="modulo-titulo">
+						<span>Módulo 3: Optimización y Casos de Uso</span>
+					</summary>
+					<div class="modulo-contenido">
+						<ul>
+							<li>{Modulo 3 - Aprendizaje 1}</li>
+							<li>{Modulo 3 - Aprendizaje 2}</li>
+							<li>{Modulo 3 - Aprendizaje 3}</li>
+							<li>{Modulo 3 - Aprendizaje 4}</li>
+						</ul>
+					</div>
+				</details>
+			</div>
+		</section>
+		<!-- =================== FIN DE CONTENIDO_CURSO.HTML =================== -->
+
+	</article>
+
+	<!-- Barra lateral con detalles adicionales -->
+	<aside id="curso-barra-lateral">
+		<div class="barra-lateral-seccion">
+			<h3>Detalles del Curso</h3>
+			<ul>
+				<li><i class="fa fa-clock-o"></i> <strong>Duración:</strong> {Duracion}</li>
+				<li><i class="fa fa-signal"></i> <strong>Nivel:</strong> {Nivel}</li>
+				<li><i class="fa fa-video-camera"></i> <strong>Formato:</strong> {Formato}</li>
+				<li><i class="fa fa-certificate"></i> <strong>Certificado:</strong> {Certificado}</li>
+			</ul>
+			<a href="#" id="btnInscribirse">Inscribirse Ahora</a>
+		</div>
+	</aside>
+</main>
+<footer>
+	<p>Derechos reservados 2025 - NORT3©</p>
+	<p>Email: nort3comunicacion@correo.com</p>
+	<p>Tel: +YYY XXXX-XXXX</p>
+	<p>Km 12 1/2 Carretera a Comasagua, Santa Tecla,
+		Libertad, El Salvador.</p>
+</footer>
+</body>
+</html>

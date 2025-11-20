@@ -6,6 +6,9 @@ import {
     borrarCurso
 } from './detallesCursosServices.js';
 
+// Siguiendo la lógica de negocio, este archivo debe contener las funciones para obtener los datos del curso seleccionado y luego mostrar su información en la página plantilla correspondiente. Por lo tanto, se debe obtener el ID del curso seleccionado y luego mostrar su información en la página plantilla correspondiente. Si el curso seleccionado 
+
+
 // --- Inicio de Pruebas de Funciones CRUD ---
 
 async function probarFuncionesCRUD() {

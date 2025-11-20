@@ -1,10 +1,9 @@
 /* Estilos base para .curso-modulo */
 .modulos-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 2rem;
     padding: 2rem;
-    justify-content: center;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -25,7 +24,7 @@
     border-radius: 8px;
     flex-basis: 100%;
     flex-grow: 1; /* Permite que los módulos crezcan para llenar el espacio vacío */
-    max-width: 400px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
 }
