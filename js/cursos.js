@@ -1,5 +1,5 @@
 import {obtenerTodosLosCursos} from './detallesCursosServices.js';
-import {getCurrentUserId, getUser} from './firebase/firebase_config.js';
+import {getCurrentUserId, getUser} from './firebase/firebaseConfig.js';
 
 // Obtenemos el contenedor principal
 const contenedorCursos = document.getElementById("cursos");
@@ -38,7 +38,7 @@ async function cargarCursos() {
                 parrafo.innerHTML = descripcionCurso;
 
                 const boton = document.createElement("a"); //se crea un enlace para la plantilla de cursos no inscritos
-                boton.href="../html/detallesCursosSinAdquirir"; //Aquí va el enlace
+                boton.href=`cursos/plantillas/detallesCursosSinAdquirir.html?id=${curso.id}`; //Enlace con ID
                 boton.classList.add("btn-caja"); //Esta es la clase que lleva para los estilos tipo botón
                 boton.innerHTML = "Comenzar ahora";
 

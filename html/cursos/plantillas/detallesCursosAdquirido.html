@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NORT3-Curso Propi</title>
+    <title>NORT3</title>
     <!-- Enlace al archivo de estilos externo -->
     <link rel="stylesheet" href="../../../css/cursos_modulos.css">
     <link rel="stylesheet" href="../../../css/main.css">
@@ -40,34 +40,12 @@
     </header>
 <main>
     <section class="curso-header">
-        <h1>{Titulo del curso}</h1>
-        <p>{Descripcion del curso}</p>
+        <h1 id="curso-titulo">{Titulo del curso}</h1>
+        <p id="curso-descripcion">{Descripcion del curso}</p>
     </section>
 
-    <section class="modulos-container">
-        <!-- Módulo 1 -->
-        <article class="modulo">
-            <h2>{Titulo del modulo}</h2>
-            <p>{Descripcion del modulo}</p>
-            <span>{Progreso}</span>
-            <span>{Boton al cuestionario}</span>
-        </article>
-
-        <!-- Módulo 2 -->
-        <article class="modulo">
-            <h2>{Titulo del modulo}</h2>
-            <p>{Descripcion del modulo}</p>
-            <span>{Progreso}</span>
-            <span>{Boton al cuestionario}</span>
-        </article>
-
-        <!-- Módulo 3 -->
-        <article class="modulo">
-            <h2>{Titulo del modulo}</h2>
-            <p>{Descripcion del modulo}</p>
-            <span>{Progreso}</span>
-            <span>{Boton al cuestionario}</span>
-        </article>
+    <section class="modulos-container" id="modulos-container">
+        <!-- Se llenará dinámicamente -->
     </section>
     <a href="../../../mis_cursos.html" class="boton-volver">
         Volver a Mis Cursos
@@ -80,5 +58,6 @@
     <p>Tel: +YYY XXXX-XXXX</p>
     <p>Km 12 1/2 Carretera a Comasagua, Santa Tecla, Libertad, El Salvador.</p>
 </footer>
+<script type="module" src="../../../js/detallesCursoAdquirido.js"></script>
 </body>
 </html>

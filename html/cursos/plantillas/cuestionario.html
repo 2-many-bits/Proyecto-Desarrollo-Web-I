@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NORT3 - Cuestionario</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/menu.css">
+    <link rel="stylesheet" href="../../../css/paginas_cursos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .cuestionario-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .pregunta {
+            margin-bottom: 1.5rem;
+        }
+        .pregunta h3 {
+            margin-bottom: 0.5rem;
+        }
+        .opciones label {
+            display: block;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+        }
+        .btn-enviar {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn-enviar:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="checkMenu" id="checkMenu">
+        <label for="checkMenu" class="labelBotonMenu">
+            <i class="fa fa-navicon" id="btnMostrar"></i>
+            <i class="fa fa-remove" id="btnOcultar"></i>
+        </label>  
+        <a href="../../../index.html" id="inicio"> 
+            <img src="../../../img/Nort3_Logo_Icono_sinFondo.png" alt="Logo NORT3">NORT3
+        </a>
+        <nav>
+            <ul>
+                <a href="../../../cursos.html" class="contenido">Cursos</a>
+                <a href="../../../mis_cursos.html" class="contenido">Mis Cursos</a>
+                <a href="../../../avisos_comunidad.html" class="contenido">Avisos</a>
+                <a href="../../../acerca_de.html" class="contenido">Nosotros</a>
+                <a href="../../../contacto.html" class="contenido">Contacto</a>
+                <a href="../../../perfil.html" class="perfil">
+                    <img src="../../../img/foto_perfil.jpg" alt="">
+                    Emanuel Rivas
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cuestionario-container">
+            <h1>Cuestionario del Módulo</h1>
+            <p>Responde las siguientes preguntas para completar el módulo.</p>
+            
+            <form id="form-cuestionario">
+                <!-- Pregunta 1 (Ejemplo) -->
+                <div class="pregunta">
+                    <h3>1. ¿Cuál es el objetivo principal de este módulo?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="p1" value="a"> Opción A</label>
+                        <label><input type="radio" name="p1" value="b"> Opción B</label>
+                        <label><input type="radio" name="p1" value="c"> Opción C</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 (Ejemplo) -->
+                <div class="pregunta">
+                    <h3>2. ¿Qué herramienta se mencionó como clave?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="p2" value="a"> Herramienta X</label>
+                        <label><input type="radio" name="p2" value="b"> Herramienta Y</label>
+                        <label><input type="radio" name="p2" value="c"> Herramienta Z</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Respuestas</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Derechos reservados 2025 - NORT3©</p>
+        <p>Email: nort3comunicacion@correo.com</p>
+        <p>Tel: +YYY XXXX-XXXX</p>
+        <p>Km 12 1/2 Carretera a Comasagua, Santa Tecla, Libertad, El Salvador.</p>
+    </footer>
+</body>
+</html>

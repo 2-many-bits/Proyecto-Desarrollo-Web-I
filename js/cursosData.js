@@ -1,6 +1,7 @@
 // Objetos de cursos basados en la plantilla de nuevoCurso
 
 export const cursoAbaco = {
+    categoria: "Facturación Electrónica",
     certificado: "De finalización",
     contenidoDelCurso: [
         {
@@ -56,6 +57,7 @@ export const cursoAbaco = {
 };
 
 export const cursoApplaudo = {
+    categoria: "Ingeniería de Software",
     certificado: "De finalización",
     contenidoDelCurso: [
         {
@@ -111,6 +113,7 @@ export const cursoApplaudo = {
 };
 
 export const cursoBoxful = {
+    categoria: "Gestión de Envíos",
     certificado: "De finalización",
     contenidoDelCurso: [
         {
@@ -166,6 +169,7 @@ export const cursoBoxful = {
 };
 
 export const cursoFiado = {
+    categoria: "Soluciones de Crédito",
     certificado: "De finalización",
     contenidoDelCurso: [
         {
@@ -221,6 +225,7 @@ export const cursoFiado = {
 };
 
 export const cursoJobbi = {
+    categoria: "Crecimiento Laboral",
     certificado: "De finalización",
     contenidoDelCurso: [
         {
@@ -276,6 +281,7 @@ export const cursoJobbi = {
 };
 
 export const cursoN1co = {
+    categoria: "Gestión Financiera",
     certificado: "De finalización",
     contenidoDelCurso: [
         {
@@ -331,6 +337,7 @@ export const cursoN1co = {
 };
 
 export const cursoPropi = {
+    categoria: "Proptech",
     certificado: "De finalización",
     contenidoDelCurso: [
         {
@@ -386,6 +393,7 @@ export const cursoPropi = {
 };
 
 export const cursoSostengo = {
+    categoria: "Capital de Trabajo",
     certificado: "De finalización",
     contenidoDelCurso: [
         {
@@ -441,6 +449,7 @@ export const cursoSostengo = {
 };
 
 export const cursoTilopay = {
+    categoria: "Cobros en Línea",
     certificado: "De finalización",
     contenidoDelCurso: [
         {
@@ -496,6 +505,7 @@ export const cursoTilopay = {
 };
 
 export const cursoWeris = {
+    categoria: "Gestión Gastronómica",
     certificado: "De finalización",
     contenidoDelCurso: [
         {

@@ -1,4 +1,4 @@
-import {db} from './firebase/firebase_config.js'
+import {db} from './firebase/firebaseConfig.js'
 import {
 	addDoc,
 	collection,
@@ -9,7 +9,8 @@ import {
 	updateDoc,
 	deleteDoc,
 	doc,
-	orderBy
+	orderBy,
+    arrayUnion
 } from 'https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js'
 
 const COLLECTION_NAME = "Cursos"
@@ -110,4 +111,23 @@ export async function borrarCurso(cursoId){
         console.error(`Error al borrar el curso con ID ${cursoId}:`, error);
 		return {success: false, error: error.message}
 	}
+}
+
+/**
+ * Inscribe a un usuario en un curso.
+ * @param {string} userId - El ID del usuario.
+ * @param {string} cursoId - El ID del curso.
+ */
+export async function inscribirCurso(userId, cursoId) {
+    try {
+        const userRef = doc(db, "Users", userId);
+        
+        await updateDoc(userRef, {
+            cursos: arrayUnion(cursoId)
+        });
+        return { success: true };
+    } catch (error) {
+        console.error("Error al inscribir al curso:", error);
+        return { success: false, error: error.message };
+    }
 }

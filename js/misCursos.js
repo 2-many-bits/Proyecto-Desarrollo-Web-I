@@ -1,5 +1,5 @@
 import {obtenerTodosLosCursos} from './detallesCursosServices.js';
-import {getCurrentUserId, getUser} from './firebase/firebase_config.js';
+import {getCurrentUserId, getUser} from './firebase/firebaseConfig.js';
 
 const contenedor = document.getElementById("tarjetas");
 
@@ -25,7 +25,7 @@ async function cargarCursosInscritos() {
 
                     const boton = document.createElement("a");
                     boton.classList.add("boton");
-                    boton.href = "#" //Aquí va el enlace hacia la plantilla de cursos inscritos
+                    boton.href = `cursos/plantillas/detallesCursosAdquirido.html?id=${curso.id}`; //Enlace corregido
                     boton.innerHTML = "Continuar";
 
                     const footerCurso = document.createElement("div");
