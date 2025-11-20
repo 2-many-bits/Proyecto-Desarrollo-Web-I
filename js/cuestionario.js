@@ -92,7 +92,6 @@ function renderizarVideo() {
         iframe.width = '560';
         iframe.height = '315';
         iframe.title = 'YouTube video player';
-        iframe.frameBorder = '0';
         iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
         iframe.referrerPolicy = 'strict-origin-when-cross-origin';
         iframe.allowFullscreen = true;

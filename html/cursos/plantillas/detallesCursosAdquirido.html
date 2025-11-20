@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
- <header>
+    <header>
         <input type="checkbox" name="checkMenu" id="checkMenu">
         
         <label for="checkMenu" class="labelBotonMenu">
@@ -22,26 +22,26 @@
         
         <a href="../../../index.html" id="inicio"> 
             <img src="../../../img/Nort3_Logo_Icono_sinFondo.png" 
-            alt="Logo NORT3">NORT3</a>
-              
+            alt="Logo NORT3">NORT3</a>          
         <nav>
             <ul>
-                    <a href="../../../cursos.html" class="contenido">Cursos</a>
-                    <a href="../../../mis_cursos.html" class="contenido">Mis Cursos</a>
-                    <a href="../../../avisos_comunidad.html" class="contenido">Avisos</a>
-                    <a href="../../../acerca_de.html" class="contenido">Nosotros</a>
-                    <a href="../../../contacto.html" class="contenido">Contacto</a>
-                    <a href="../../../perfil.html" class="perfil">
+                    <a href="../../cursos.html" class="contenido">Cursos</a>
+                    <a href="../../mis_cursos.html" class="contenido">Mis Cursos</a>
+                    <a href="../../avisos_comunidad.html" class="contenido">Avisos</a>
+                    <a href="../../acerca_de.html" class="contenido">Nosotros</a>
+                    <a href="../../contacto.html" class="contenido">Contacto</a>
+                    <a href="../../chatbot.html" class="contenido">Chatbot</a>
+                    <button type="button" id="idBtnLogout">Log out</button>
+                    <a href="../../perfil.html" class="perfil">
                         <img src="../../../img/foto_perfil.jpg" alt="">
-                        Emanuel Rivas</a>
-                
+                        Ver perfil</a>
             </ul>
         </nav>
     </header>
 <main>
     <section class="curso-header">
-        <h1 id="curso-titulo">{Titulo del curso}</h1>
-        <p id="curso-descripcion">{Descripcion del curso}</p>
+        <h1 id="curso-titulo"></h1>
+        <p id="curso-descripcion"></p>
     </section>
 
     <section class="modulos-container" id="modulos-container">
@@ -58,6 +58,7 @@
     <p>Tel: +YYY XXXX-XXXX</p>
     <p>Km 12 1/2 Carretera a Comasagua, Santa Tecla, Libertad, El Salvador.</p>
 </footer>
+<script src="../../../js/logout.js" type="module"></script>
 <script type="module" src="../../../js/detallesCursoAdquirido.js"></script>
 </body>
 </html>

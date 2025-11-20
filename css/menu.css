@@ -25,8 +25,9 @@ header nav ul{
 
 }
 
-header nav ul a{
+header nav ul a, header nav ul button{
     transition: all 0.3s ;
+    cursor: pointer;
 }
 
 
