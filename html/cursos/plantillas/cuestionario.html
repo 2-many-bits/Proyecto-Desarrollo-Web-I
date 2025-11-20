@@ -37,34 +37,26 @@
 
     <main>
         <div class="cuestionario-container">
-            <h1>Cuestionario del Módulo</h1>
-            <p>Responde las siguientes preguntas para completar el módulo.</p>
+            <h1 id="titulo-modulo">Cuestionario del Módulo</h1>
+            <p id="descripcion-modulo">Responde las siguientes preguntas para completar el módulo.</p>
+            
+            <!-- Contenedor del video -->
+            <div class="video-container" id="video-container">
+                <!-- El video se cargará dinámicamente aquí -->
+            </div>
             
             <form id="form-cuestionario">
-                <!-- Pregunta 1 (Ejemplo) -->
-                <div class="pregunta">
-                    <h3>1. ¿Cuál es el objetivo principal de este módulo?</h3>
-                    <div class="opciones">
-                        <label><input type="radio" name="p1" value="a"> Opción A</label>
-                        <label><input type="radio" name="p1" value="b"> Opción B</label>
-                        <label><input type="radio" name="p1" value="c"> Opción C</label>
-                    </div>
-                </div>
-
-                <!-- Pregunta 2 (Ejemplo) -->
-                <div class="pregunta">
-                    <h3>2. ¿Qué herramienta se mencionó como clave?</h3>
-                    <div class="opciones">
-                        <label><input type="radio" name="p2" value="a"> Herramienta X</label>
-                        <label><input type="radio" name="p2" value="b"> Herramienta Y</label>
-                        <label><input type="radio" name="p2" value="c"> Herramienta Z</label>
-                    </div>
-                </div>
-
+                <!-- Las preguntas se cargarán dinámicamente aquí -->
                 <button type="submit" class="btn-enviar">Enviar Respuestas</button>
             </form>
+            
+            <div id="resultado-cuestionario" class="resultado-oculto">
+                <!-- Los resultados se mostrarán aquí -->
+            </div>
         </div>
     </main>
+    
+    <script type="module" src="../../../js/cuestionario.js"></script>
 
     <footer>
         <p>Derechos reservados 2025 - NORT3©</p>

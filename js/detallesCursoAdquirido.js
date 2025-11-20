@@ -43,6 +43,8 @@ function renderizarModulos(modulos, cursoId) {
 
     contenedor.innerHTML = '';
 
+    console.log('Rendering modules with cursoId:', cursoId);
+
     if (modulos && Array.isArray(modulos)) {
         modulos.forEach((modulo, index) => {
             const article = document.createElement('article');
@@ -58,7 +60,10 @@ function renderizarModulos(modulos, cursoId) {
             spanProgreso.textContent = 'Progreso: 0%'; // Placeholder
 
             const btnCuestionario = document.createElement('a');
-            btnCuestionario.href = `cuestionario.html?cursoId=${cursoId}&moduloIndex=${index}`;
+            // Both files are in the same directory: html/cursos/plantillas/
+            const quizUrl = `cuestionario.html?cursoId=${cursoId}&modulo=${index}`;
+            console.log(`Module ${index} quiz URL:`, quizUrl);
+            btnCuestionario.href = quizUrl;
             btnCuestionario.className = 'btn-cuestionario';
             btnCuestionario.textContent = 'Ir al Cuestionario';
 
