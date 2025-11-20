@@ -1,0 +1,59 @@
+/* Estilos para la página de cuestionario */
+main {
+    padding-top: 15vh;
+    min-height: 80vh;
+    background-color: var(--gris-claro);
+}
+
+.cuestionario-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.pregunta {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.pregunta h3 {
+    margin-bottom: 1rem;
+    color: var(--azul-oscuro);
+}
+
+.opciones label {
+    display: block;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.opciones label:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-enviar {
+    background-color: var(--verde-lima);
+    color: var(--azul-oscuro);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 2rem auto 0;
+}
+
+.btn-enviar:hover {
+    background-color: var(--azul-oscuro);
+    color: var(--verde-lima);
+    transform: translateY(-2px);
+}

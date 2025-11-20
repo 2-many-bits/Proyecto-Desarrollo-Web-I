@@ -49,6 +49,66 @@ async function insertarCurso(curso) {
     }
 }
 
+// Función para actualizar los detalles de un curso existente en Firebase
+async function actualizarDetallesCurso(cursoId, nuevosDatos) {
+    try {
+        const resultado = await actualizarCurso(cursoId, nuevosDatos);
+        if (resultado.success) {
+            console.log(`✓ Curso con ID "${cursoId}" actualizado exitosamente.`);
+        } else {
+            console.error(`✗ Error al actualizar el curso con ID "${cursoId}":`, resultado.error);
+        }
+        return resultado;
+    } catch (error) {
+        console.error(`✗ Excepción al actualizar el curso con ID "${cursoId}":`, error);
+        throw error;
+    }
+}
+
+// Función para actualizar todos los cursos con la nueva información de cursosData.js
+async function actualizarTodosLosCursos() {
+    console.log('Iniciando actualización de todos los cursos en Firebase...');
+    
+    try {
+        // Obtener todos los cursos de Firebase
+        const resultado = await obtenerTodosLosCursos();
+        
+        if (!resultado.success) {
+            console.error('Error al obtener cursos de Firebase:', resultado.error);
+            return;
+        }
+        
+        const cursosFirebase = resultado.data;
+        console.log(`Se encontraron ${cursosFirebase.length} cursos en Firebase.`);
+        
+        // Actualizar cada curso
+        for (const cursoFirebase of cursosFirebase) {
+            // Buscar el curso actualizado en cursosData por nombre
+            const cursoActualizado = todosCursos.find(c => c.nombre === cursoFirebase.nombre);
+            
+            if (cursoActualizado) {
+                try {
+                    const resultadoActualizacion = await actualizarCurso(cursoFirebase.id, cursoActualizado);
+                    
+                    if (resultadoActualizacion.success) {
+                        console.log(`✓ Curso "${cursoFirebase.nombre}" (ID: ${cursoFirebase.id}) actualizado exitosamente.`);
+                    } else {
+                        console.error(`✗ Error al actualizar "${cursoFirebase.nombre}":`, resultadoActualizacion.error);
+                    }
+                } catch (error) {
+                    console.error(`✗ Excepción al actualizar "${cursoFirebase.nombre}":`, error);
+                }
+            } else {
+                console.warn(`⚠ No se encontró datos actualizados para el curso "${cursoFirebase.nombre}"`);
+            }
+        }
+        
+        console.log('Proceso de actualización completado.');
+    } catch (error) {
+        console.error('Error general en actualización:', error);
+    }
+}
+
 // Exportar funciones y cursos individuales para uso en otros módulos
 export {
     cursoAbaco,
@@ -63,65 +123,14 @@ export {
     cursoWeris,
     todosCursos,
     insertarTodosLosCursos,
-    insertarCurso
+    insertarCurso, 
+    actualizarDetallesCurso,
+    actualizarTodosLosCursos
 };
 
 // Para ejecutar desde la consola del navegador:
 // Descomentar la siguiente línea y cargar este script en una página con Firebase configurado
-insertarTodosLosCursos();
-const nuevoCurso = {
-        certificado: "De finalización",
-        contenidoDelCurso: [
-            {
-                contenidosModulo: [
-                    "¿Qué es la logística de última milla y por qué es crucial?",
-                    "El rol de los lockers inteligentes en el e-commerce.",
-                    "Conociendo la propuesta de valor de Boxful LATAM.",
-                    "Creación de tu primer cuenta y primer vistazo al dashboard"
-                ],
-                descripcionModulo: "{insertar descripción adecuada}",
-                tituloModulo: "Introducción a la Logística de Última Milla."
-            },
-            {
-                contenidosModulo: [
-                    "Cómo registrar un nuevo paquete en la plataforma.",
-                    "Selección del locker y generación de etiquetas.",
-                    "Seguimiento de envíos en tiempo real.",
-                    "Notificaciones automáticas para ti y tu cliente."
-                ],
-                descripcionModulo: "{insertar descripción adecuada}",
-                tituloModulo: "Gestión de Envíos con Boxful"
-            },
-            {
-                contenidosModulo: [
-                    "Integración de Boxful con plataformas como Shopify.",
-                    "Gestión de devoluciones de manera sencilla.",
-                    "Consejos para empacar tus productos de forma segura.",
-                    "Análisis de reportes para optimizar costos."
-                ],
-                descripcionModulo: "{insertar descripción adecuada}",
-                tituloModulo: "Optimización y Casos de Uso"
-            }
-        ],
-        descripcion: "Aprende a usar la plataforma de lockers inteligentes y logística de última milla de Boxful LATAM. Este curso te enseña cómo enviar productos de forma rápida y segura, ideal para negocios que venden en línea y quieren mejorar su entrega.",
-        duracion: "4 horas de contenido",
-        formato: "Videos",
-        imagen: "../img/boxful.png",
-        loQueAprenderas: [
-            "Gestionar envíos de forma eficiente usando la plataforma de Boxful.",
-            "Optimizar la logística de última milla para tu negocio en línea.",
-            "Integrar los lockers inteligentes en tu proceso de entrega y devolución.",
-            "Mejorar la experiencia de tus clientes con entregas rápidas y seguras."
-        ],
-        nivel: "Principiante",
-        nombre: "Domina tus envíos con Boxful LATAM",
-        prerrequisitos: [
-            "Tener un negocio de e-commerce o interés en crear uno.",
-            "Conocimientos básicos de navegación por internet.",
-            "No se requiere experiencia previa en logística."
-        ],
-        subtitulo: "Logística y E-commerce",
-        titulo: "Logística Inteligente con Boxful LATAM"
-    };
+// insertarTodosLosCursos();
 
-crearCurso(nuevoCurso)
+// Ejecutar la actualización de todos los cursos
+actualizarTodosLosCursos();

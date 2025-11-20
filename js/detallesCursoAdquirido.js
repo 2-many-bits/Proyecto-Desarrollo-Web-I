@@ -59,15 +59,8 @@ function renderizarModulos(modulos, cursoId) {
 
             const btnCuestionario = document.createElement('a');
             btnCuestionario.href = `cuestionario.html?cursoId=${cursoId}&moduloIndex=${index}`;
-            btnCuestionario.className = 'btn-cuestionario'; // Asumiendo que existe una clase para botones
+            btnCuestionario.className = 'btn-cuestionario';
             btnCuestionario.textContent = 'Ir al Cuestionario';
-            btnCuestionario.style.display = 'inline-block';
-            btnCuestionario.style.marginTop = '10px';
-            btnCuestionario.style.padding = '10px 20px';
-            btnCuestionario.style.backgroundColor = '#007bff';
-            btnCuestionario.style.color = 'white';
-            btnCuestionario.style.textDecoration = 'none';
-            btnCuestionario.style.borderRadius = '5px';
 
             article.appendChild(h2);
             article.appendChild(p);
