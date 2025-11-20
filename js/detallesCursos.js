@@ -82,9 +82,9 @@ async function probarFuncionesCRUD() {
 }
 
 // Ejecutar las pruebas cuando el DOM esté cargado
-document.addEventListener('DOMContentLoaded', () => {
-    probarFuncionesCRUD();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     probarFuncionesCRUD();
+// });
 
 // Flujo de cursos:
 /*
