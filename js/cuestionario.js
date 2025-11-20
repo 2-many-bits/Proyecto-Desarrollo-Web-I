@@ -1,4 +1,5 @@
-import { obtenerCursoPorId } from './detallesCursosServices.js';
+import { obtenerCursoPorId, actualizarProgresoModulo, obtenerProgresoUsuario } from './detallesCursosServices.js';
+import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js';
 
 // Obtener parámetros de la URL
 const urlParams = new URLSearchParams(window.location.search);
@@ -20,11 +21,12 @@ console.log('========================');
 let cursoData = null;
 let moduloData = null;
 let cuestionarioData = null;
+let userId = null;
 
 /**
  * Inicializa la página del cuestionario
  */
-async function inicializarCuestionario() {
+function inicializarCuestionario() {
     if (!cursoId || isNaN(moduloIndex)) {
         console.error('Invalid parameters detected:');
         console.error('cursoId:', cursoId, 'isValid:', !!cursoId);
@@ -33,40 +35,69 @@ async function inicializarCuestionario() {
         return;
     }
 
-    try {
-        // Obtener datos del curso desde Firebase
-        const resultado = await obtenerCursoPorId(cursoId);
-        
-        if (!resultado.success) {
-            mostrarError('No se pudo cargar el curso');
-            return;
-        }
+    const auth = getAuth();
+    onAuthStateChanged(auth, async (user) => {
+        if (user) {
+            userId = user.uid;
+            try {
+                // Obtener datos del curso desde Firebase
+                const resultado = await obtenerCursoPorId(cursoId);
+                
+                if (!resultado.success) {
+                    mostrarError('No se pudo cargar el curso');
+                    return;
+                }
 
-        cursoData = resultado.data;
-        moduloData = cursoData.contenidoDelCurso[moduloIndex];
-        
-        if (!moduloData) {
-            mostrarError('Módulo no encontrado');
-            return;
-        }
+                cursoData = resultado.data;
+                moduloData = cursoData.contenidoDelCurso[moduloIndex];
+                
+                if (!moduloData) {
+                    mostrarError('Módulo no encontrado');
+                    return;
+                }
 
-        cuestionarioData = moduloData.cuestionario;
-        
-        if (!cuestionarioData || cuestionarioData.length === 0) {
-            mostrarError('Este módulo no tiene cuestionario disponible');
-            return;
-        }
+                cuestionarioData = moduloData.cuestionario;
+                
+                if (!cuestionarioData || cuestionarioData.length === 0) {
+                    mostrarError('Este módulo no tiene cuestionario disponible');
+                    return;
+                }
 
-        // Renderizar la página
-        renderizarTitulo();
-        renderizarVideo();
-        renderizarPreguntas();
-        configurarFormulario();
-        
-    } catch (error) {
-        console.error('Error al inicializar cuestionario:', error);
-        mostrarError('Ocurrió un error al cargar el cuestionario');
-    }
+                // Verificar estado del módulo y actualizar a "En progreso" si es "Pendiente"
+                console.log('Fetching user progress...');
+                const progresoResult = await obtenerProgresoUsuario(userId);
+                console.log('Progress result:', progresoResult);
+                
+                const progresoCurso = progresoResult.success ? (progresoResult.data[cursoId] || {}) : {};
+                const modulosProgreso = progresoCurso.modulos || {};
+                const moduloEstado = modulosProgreso[moduloIndex] ? modulosProgreso[moduloIndex].estado : 'Pendiente';
+
+                console.log('Current module estado:', moduloEstado);
+                console.log('Progreso del curso:', progresoCurso);
+                console.log('Modulos progreso:', modulosProgreso);
+
+                if (moduloEstado === 'Pendiente') {
+                    console.log('Módulo está Pendiente, actualizando a En progreso...');
+                    const updateResult = await actualizarProgresoModulo(userId, cursoId, moduloIndex, 'En progreso', 0, cursoData.contenidoDelCurso.length);
+                    console.log('Update result:', updateResult);
+                }
+
+                // Renderizar la página
+                renderizarTitulo();
+                renderizarVideo();
+                renderizarPreguntas();
+                configurarFormulario();
+                
+            } catch (error) {
+                console.error('Error al inicializar cuestionario:', error);
+                mostrarError('Ocurrió un error al cargar el cuestionario');
+            }
+        } else {
+            // User is not signed in
+            mostrarError('Debes iniciar sesión para realizar el cuestionario');
+            setTimeout(() => window.location.href = '../../../html/login.html', 2000);
+        }
+    });
 }
 
 /**
@@ -159,7 +190,7 @@ function configurarFormulario() {
 /**
  * Evalúa las respuestas del usuario
  */
-function evaluarRespuestas() {
+async function evaluarRespuestas() {
     const form = document.getElementById('form-cuestionario');
     const formData = new FormData(form);
     
@@ -184,6 +215,24 @@ function evaluarRespuestas() {
     });
     
     mostrarResultados(correctas, total, resultados);
+
+    // Si todas las respuestas son correctas, actualizar progreso
+    if (correctas === total) {
+        try {
+            const totalModulos = cursoData.contenidoDelCurso.length;
+            await actualizarProgresoModulo(
+                userId, 
+                cursoId, 
+                moduloIndex, 
+                'Completado', 
+                100, 
+                totalModulos
+            );
+            console.log('Progreso actualizado a Completado');
+        } catch (error) {
+            console.error('Error al actualizar progreso:', error);
+        }
+    }
 }
 
 /**
@@ -192,12 +241,13 @@ function evaluarRespuestas() {
 function mostrarResultados(correctas, total, resultados) {
     const resultadoDiv = document.getElementById('resultado-cuestionario');
     const porcentaje = Math.round((correctas / total) * 100);
-    const aprobado = porcentaje >= 70;
+    const aprobado = porcentaje === 100; // Solo se aprueba con 100% según requerimientos
     
     resultadoDiv.innerHTML = `
         <div class="resultado-header ${aprobado ? 'aprobado' : 'reprobado'}">
-            <h2>${aprobado ? '¡Felicidades!' : 'Inténtalo de nuevo'}</h2>
+            <h2>${aprobado ? '¡Felicidades! Módulo Completado' : 'Inténtalo de nuevo'}</h2>
             <p class="puntuacion">Obtuviste ${correctas} de ${total} respuestas correctas (${porcentaje}%)</p>
+            ${!aprobado ? '<p>Necesitas obtener todas las respuestas correctas para completar el módulo.</p>' : ''}
         </div>
         
         <div class="detalles-respuestas">

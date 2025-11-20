@@ -13,14 +13,18 @@ async function cargarCursosInscritos() {
         const user = await getUser(userId);
 
         const cursosUsuario = user.cursos == undefined ? [] : user.cursos;
+        const progresoUsuario = user.progreso || {};
 
         if (cursosUsuario.length == 0) {
             contenedor.innerHTML = "<h2>Aún no tienes cursos inscritos!</h2>";
         } else {
             for (let curso of cursos) {
                 if (cursosUsuario.includes(curso.id)) {
+                    const progresoCurso = progresoUsuario[curso.id] || {};
+                    const porcentajeValor = progresoCurso.porcentaje || 0;
+
                     const porcentaje = document.createElement("p");
-                    porcentaje.innerHTML = curso.porcentaje == undefined ? "0%" : `${porcentaje}%`;
+                    porcentaje.innerHTML = `${porcentajeValor}%`;
                     porcentaje.classList.add("porcentaje");
 
                     const boton = document.createElement("a");

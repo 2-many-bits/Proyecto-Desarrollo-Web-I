@@ -1,5 +1,6 @@
 // Importa funciones existentes de firebase config
 import { getCurrentUserId, getUser } from "./firebase/firebaseConfig.js";
+import { obtenerCursoPorId } from "./detallesCursosServices.js";
 
 // Funcion auxiliar seleccionar elementos por texto de etiqueta
 function seleccionarPorEtiqueta(seccionId, textoEtiqueta) {
@@ -68,10 +69,75 @@ async function cargarDatosUsuario() {
         if (empresa) empresa.textContent = userData.company || "No disponible";
         if (fechaContratacion) fechaContratacion.textContent = formatearFecha(userData.hireDate) || "No disponible";
 
+        // Renderizar Logros y Diplomas
+        await renderizarLogrosYDiplomas(userData);
+
         console.log("Datos del usuario cargados exitosamente:", userData);
     } catch (error) {
         console.error("Error al cargar los datos del usuario:", error);
         alert("Hubo un problema al cargar tus datos. Intenta nuevamente.");
+    }
+}
+
+async function renderizarLogrosYDiplomas(userData) {
+    // Actualizar estadísticas en Logros
+    const cursosCompletados = userData.certificaciones ? userData.certificaciones.length : 0;
+    const campoCursosCompletados = seleccionarPorEtiqueta('logros', 'Cursos completados');
+    if (campoCursosCompletados) {
+        campoCursosCompletados.textContent = cursosCompletados;
+    }
+
+    // Calcular efectividad (promedio de porcentajes de cursos iniciados)
+    let efectividad = 0;
+    if (userData.progreso) {
+        const progresos = Object.values(userData.progreso);
+        if (progresos.length > 0) {
+            const sumaPorcentajes = progresos.reduce((acc, curr) => acc + (curr.porcentaje || 0), 0);
+            efectividad = Math.round(sumaPorcentajes / progresos.length);
+        }
+    }
+    const campoEfectividad = seleccionarPorEtiqueta('logros', 'Efectividad en cursos');
+    if (campoEfectividad) {
+        campoEfectividad.textContent = `${efectividad}%`;
+    }
+
+    // Renderizar Diplomas
+    const diplomasContainer = document.getElementById('diplomas');
+    if (diplomasContainer && userData.certificaciones && userData.certificaciones.length > 0) {
+        // Limpiar diplomas existentes (excepto el título h1)
+        const titulo = diplomasContainer.querySelector('h1');
+        diplomasContainer.innerHTML = '';
+        if (titulo) diplomasContainer.appendChild(titulo);
+
+        for (const cursoId of userData.certificaciones) {
+            const cursoResult = await obtenerCursoPorId(cursoId);
+            if (cursoResult.success) {
+                const curso = cursoResult.data;
+                const fila = document.createElement('div');
+                fila.className = 'fila';
+                
+                const img = document.createElement('img');
+                img.src = '../img/diploma_1.png'; // Placeholder image, could be dynamic based on course
+                img.alt = 'Diploma';
+                
+                const h3 = document.createElement('h3');
+                h3.textContent = `Curso "${curso.nombre}" aprobado exitosamente`;
+                
+                fila.appendChild(img);
+                fila.appendChild(h3);
+                diplomasContainer.appendChild(fila);
+            }
+        }
+    } else if (diplomasContainer) {
+         // Limpiar diplomas existentes (excepto el título h1)
+         const titulo = diplomasContainer.querySelector('h1');
+         diplomasContainer.innerHTML = '';
+         if (titulo) diplomasContainer.appendChild(titulo);
+         
+         const mensaje = document.createElement('p');
+         mensaje.textContent = "Aún no tienes diplomas. ¡Completa un curso para obtener uno!";
+         mensaje.style.padding = "20px";
+         diplomasContainer.appendChild(mensaje);
     }
 }
 
