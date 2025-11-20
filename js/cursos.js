@@ -37,9 +37,9 @@ async function cargarCursos() {
                 parrafo.classList.add("descripcion");
                 parrafo.innerHTML = descripcionCurso;
 
-                const boton = document.createElement("a");
-                boton.href="../detallesCursosSinAdquirir";
-                boton.classList.add("btn-caja");
+                const boton = document.createElement("a"); //se crea un enlace para la plantilla de cursos no inscritos
+                boton.href="../html/detallesCursosSinAdquirir"; //Aquí va el enlace
+                boton.classList.add("btn-caja"); //Esta es la clase que lleva para los estilos tipo botón
                 boton.innerHTML = "Comenzar ahora";
 
                 const seccion = document.createElement("section");
