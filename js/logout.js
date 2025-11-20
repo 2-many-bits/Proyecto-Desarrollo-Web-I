@@ -10,11 +10,11 @@ onAuthStateChanged(auth, async (user) => {
     }
 });
 
-// document.getElementById("idBtnLogout").addEventListener("click", async () => {
-//     try {
-//         await signOut(auth);
-//         window.location.href = "../html/login.html";
-//     } catch (error) {
-//         console.error("Error al cerrar sesión: ", error);
-//     }
-// });
+document.getElementById("idBtnLogout").addEventListener("click", async () => {
+    try {
+        await signOut(auth);
+        window.location.href = "../html/login.html";
+    } catch (error) {
+        console.error("Error al cerrar sesión: ", error);
+    }
+});
