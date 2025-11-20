@@ -283,7 +283,7 @@ a:active {
 
     #vision-mision article {
         width: 80%;
-        height: 40%;
+        height: auto;
         min-height: 200px;
     }
 
