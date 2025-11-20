@@ -80,25 +80,120 @@ async function cargarDatosUsuario() {
 }
 
 async function renderizarLogrosYDiplomas(userData) {
-    // Actualizar estadísticas en Logros
-    const cursosCompletados = userData.certificaciones ? userData.certificaciones.length : 0;
-    const campoCursosCompletados = seleccionarPorEtiqueta('logros', 'Cursos completados');
-    if (campoCursosCompletados) {
-        campoCursosCompletados.textContent = cursosCompletados;
-    }
-
-    // Calcular efectividad (promedio de porcentajes de cursos iniciados)
-    let efectividad = 0;
-    if (userData.progreso) {
-        const progresos = Object.values(userData.progreso);
-        if (progresos.length > 0) {
-            const sumaPorcentajes = progresos.reduce((acc, curr) => acc + (curr.porcentaje || 0), 0);
-            efectividad = Math.round(sumaPorcentajes / progresos.length);
+    const logrosContainer = document.getElementById('logros');
+    const tablaLogros = logrosContainer.querySelector('.tabla');
+    
+    // Definición de logros
+    const logros = [
+        {
+            id: 'bienvenida',
+            titulo: 'Bienvenido a NORT3',
+            descripcion: 'Ingresa a la plataforma por primera vez.',
+            icono: 'fa-solid fa-door-open',
+            condicion: () => true // Siempre desbloqueado si está logueado
+        },
+        {
+            id: 'primer-curso-adquirido',
+            titulo: 'Primer paso',
+            descripcion: 'Adquiere tu primer curso.',
+            icono: 'fa-solid fa-shopping-cart',
+            condicion: (data) => data.cursos && data.cursos.length >= 1
+        },
+        {
+            id: 'tres-cursos-adquiridos',
+            titulo: 'Coleccionista de conocimiento',
+            descripcion: 'Adquiere 3 cursos.',
+            icono: 'fa-solid fa-layer-group',
+            condicion: (data) => data.cursos && data.cursos.length >= 3
+        },
+        {
+            id: 'primer-modulo',
+            titulo: 'Primer logro',
+            descripcion: 'Completa tu primer módulo.',
+            icono: 'fa-solid fa-check',
+            condicion: (data) => {
+                if (!data.progreso) return false;
+                return Object.values(data.progreso).some(progresoCurso => 
+                    progresoCurso.modulos && Object.values(progresoCurso.modulos).some(m => m.estado === 'Completado')
+                );
+            }
+        },
+        {
+            id: 'primer-curso-completado',
+            titulo: 'Graduado novato',
+            descripcion: 'Completa tu primer curso.',
+            icono: 'fa-solid fa-graduation-cap',
+            condicion: (data) => data.certificaciones && data.certificaciones.length >= 1
+        },
+        {
+            id: 'cinco-modulos',
+            titulo: 'Constancia pura',
+            descripcion: 'Completa 5 módulos en total.',
+            icono: 'fa-solid fa-list-check',
+            condicion: (data) => {
+                if (!data.progreso) return false;
+                let total = 0;
+                Object.values(data.progreso).forEach(progresoCurso => {
+                    if (progresoCurso.modulos) {
+                        Object.values(progresoCurso.modulos).forEach(m => {
+                            if (m.estado === 'Completado') total++;
+                        });
+                    }
+                });
+                return total >= 5;
+            }
+        },
+        {
+            id: 'tres-cursos-completados',
+            titulo: 'Maestro del aprendizaje',
+            descripcion: 'Completa 3 cursos.',
+            icono: 'fa-solid fa-award',
+            condicion: (data) => data.certificaciones && data.certificaciones.length >= 3
         }
-    }
-    const campoEfectividad = seleccionarPorEtiqueta('logros', 'Efectividad en cursos');
-    if (campoEfectividad) {
-        campoEfectividad.textContent = `${efectividad}%`;
+    ];
+
+    // Renderizar Logros
+    if (tablaLogros) {
+        tablaLogros.innerHTML = ''; // Limpiar contenido anterior
+
+        logros.forEach(logro => {
+            const desbloqueado = logro.condicion(userData);
+            
+            const fila = document.createElement('div');
+            fila.className = `fila ${desbloqueado ? 'logro-desbloqueado' : 'logro-bloqueado'}`;
+            
+            const icono = document.createElement('i');
+            icono.className = logro.icono;
+            
+            const campo = document.createElement('div');
+            campo.className = 'campo';
+            
+            const titulo = document.createElement('h5');
+            titulo.textContent = logro.titulo;
+            
+            const descripcion = document.createElement('h3'); // Usamos h3 para mantener estilo de valor
+            descripcion.textContent = logro.descripcion;
+            descripcion.style.fontSize = "1em"; 
+            descripcion.style.fontWeight = "normal";
+
+            campo.appendChild(titulo);
+            campo.appendChild(descripcion);
+            
+            fila.appendChild(icono);
+            fila.appendChild(campo);
+            
+            // Si está bloqueado, añadir icono de candado
+            if (!desbloqueado) {
+                const candado = document.createElement('i');
+                candado.className = 'fa-solid fa-lock';
+                candado.style.marginLeft = 'auto'; // Empujar a la derecha
+                candado.style.fontSize = '1.5em';
+                candado.style.color = 'var(--gris-textos)';
+                fila.appendChild(candado);
+            }
+
+            tablaLogros.appendChild(fila);
+        });
     }
 
     // Renderizar Diplomas
@@ -117,7 +212,7 @@ async function renderizarLogrosYDiplomas(userData) {
                 fila.className = 'fila';
                 
                 const img = document.createElement('img');
-                img.src = '../img/diploma_1.png'; // Placeholder image, could be dynamic based on course
+                img.src = '../img/diploma_1.png'; // Placeholder image
                 img.alt = 'Diploma';
                 
                 const h3 = document.createElement('h3');

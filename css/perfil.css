@@ -105,6 +105,34 @@ h4 {
 }
 
 
+
+/* Estilos para Logros */
+.logro-bloqueado {
+    background-color: #f0f0f0;
+    opacity: 0.7;
+    filter: grayscale(100%);
+    border: 1px dashed var(--gris-textos);
+}
+
+.logro-bloqueado h3, .logro-bloqueado h5, .logro-bloqueado i {
+    color: var(--gris-textos) !important;
+}
+
+.logro-desbloqueado {
+    border: 1px solid var(--verde-lima);
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logro-desbloqueado i {
+    color: var(--verde-lima);
+}
+
+.logro-desbloqueado h5 {
+    color: var(--azul-encendido);
+}
+
+
 /* DIPLOMAS */
 #diplomas .fila {
     border-radius: 20px;
