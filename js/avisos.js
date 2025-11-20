@@ -1,13 +1,11 @@
-// Importar la conexión a Firebase (db es la database)
-import { db } from "././firebase/avisos_firebase.js";
+// IMPORTAR LA CONEXION A FIREBASE DESDE FIREBASECONFIG
+import { db } from "./firebase/firebaseConfig.js";
 
-//  Importar funciones de Firestore que necesitamos
+// IMPORTAR FUNCIONES DE FIRESTORE
 import { addDoc,
     collection,
     serverTimestamp, query, orderBy, getDocs, getDoc, updateDoc, deleteDoc, doc
- } from 'https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js'; 
-
-
+ } from 'https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js';
 
 // Coleccion de avisos
 const COLLECTION_NAME = 'avisos';
@@ -73,7 +71,8 @@ const  determinarCategoria = function(categoria) {
     return {
         nombre: "Sin categoría",
         boton: "Ver más",
-        icono: "fa fa-newspaper-o"
+        icono: "fa fa-newspaper-o",
+        enlace: null
     };
 }
 
@@ -99,6 +98,7 @@ async function mostrarAvisos() {
       const botonFrase = categoriaInformacion.boton;
       const iconoCategoria = categoriaInformacion.icono;
       let destacado = "";
+      const rutaBoton = categoriaInformacion.enlace;
 
       if (aviso.destacado) {destacado = "destacado"}
 
@@ -114,7 +114,7 @@ async function mostrarAvisos() {
                     <p class="descripcion-aviso">
                         ${aviso.descripcion}
                     </p>
-                    <a href="#" class="btn-ver-mas">${botonFrase}</a>
+                    <a href="${rutaBoton}.html" class="btn-ver-mas">${botonFrase}</a>
                 </article>
 
       `
