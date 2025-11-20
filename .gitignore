@@ -1,7 +1,7 @@
 # Ignorar configuración de Firebase
 firebase_config.js
 firebaseConfig.js
-
+avisos_firebase.js
 # Ignorar archivos temporales
 *.log
 css/mainOG.css

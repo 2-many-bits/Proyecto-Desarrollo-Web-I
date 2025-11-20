@@ -31,40 +31,45 @@
                     <a href="../html/acerca_de.html" class="contenido">Nosotros</a>
                     <a href="../html/contacto.html" class="contenido">Contacto</a>
                     <a href="../html/chatbot.html" class="contenido">Chatbot</a>
+                    <button type="button" id="idBtnLogout">Log out</button>
                     <a href="../html/perfil.html" class="perfil">
                         <img src="../img/foto_perfil.jpg" alt="">
-                        Emanuel Rivas</a>
+                        Ver perfil</a>
             </ul>
         </nav>
     </header>
-    <div class="contenedor">
-        <div class="columna">
-            <div class="fila">
-                <div class="encabezado">
-                    <h2>NORT3 AI<br>
-                        <small>Gemini para capacitar empresas</small>
-                    </h2>
-                    <button type="button" class="btn" id="idBtnLimpiar">
-                        <i class="fa-solid fa-arrow-rotate-left"></i>Iniciar nuevo chat
-                    </button>
+    <main> 
+        <div class="contenedor">
+            <div class="columna">
+                <div class="fila">
+                    <div class="encabezado">
+                        <h2>NORT3 AI<br>
+                            <small>Gemini para capacitar empresas</small>
+                        </h2>
+                        <button type="button" class="btn" id="idBtnLimpiar">
+                            <i class="fa-solid fa-arrow-rotate-left"></i>Iniciar nuevo chat
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="fila">
-                <div id="contenidoChat">
-                    <!-- Aquí ira el contenido dinámico del js -->
+                <div class="fila">
+                    <div id="contenidoChat">
+                        <!-- Aquí ira el contenido dinámico del js -->
+                    </div>
                 </div>
-            </div>
-            <div class="fila">
-                <div class="barraTxt">
-                    <textarea class="formControl" id="idTxtMensaje" placeholder="Enviar mensaje a Gemini"> </textarea>
-                    <button type="button" class="btn" id="idBtnEnviar">
-                        <i class="fa-solid fa-paper-plane"></i>
-                    </button>
+                <div class="fila">
+                    <div class="barraTxt">
+                        <textarea class="formControl" id="idTxtMensaje" placeholder="Enviar mensaje a Gemini"> </textarea>
+                        <button type="button" class="btn" id="idBtnEnviar">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="../js/configuracion_gemini.js" type="module"></script>
+    </main>
+    <script src="../js/configuracionGemini.js" type="module"></script>
     <script src="../js/chatbot.js" type="module"></script>
+    <script src="../js/logout.js" type="module"></script>
+    
 </body>
 </html>
