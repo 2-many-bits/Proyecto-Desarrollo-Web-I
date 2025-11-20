@@ -1,4 +1,6 @@
 import {URL} from "./configuracionGemini.js";
+import {obtenerTodosLosCursos} from "./detallesCursosServices.js";
+import {getCurrentUserId, getUser} from './firebase/firebaseConfig.js';
 
 const contenedorChat = document.getElementById("contenidoChat");
 const textareaMensaje = document.getElementById("idTxtMensaje");
@@ -6,47 +8,27 @@ const buttonEnviar = document.getElementById("idBtnEnviar");
 const buttonLimpiar = document.getElementById("idBtnLimpiar");
 
 const conversacion = [];
-const informacionPerfil = {
-    nombre: "Emanuel Rivas",
-    cargo: "Desarrollador Fullstack",
-    empresa: {
-        nombre: "Lulu's",
-        sector: "Turismo, comercio y souvenirs",
-        descripcion: "Ventas para turistas surfers en el malecón. Camisas, llaveros, artesanías y\
-         suplementos para tablas",
-        problemas: [
-            "No tengo dinero para crear mis productos",
-            "Quiero llegar a clientes pero no tengo repartidor"
-        ],
-        cursos: [
-            {
-                nombre: "Gestiona tus alquileres con Propi: tecnología para arrendadores y emprendedores",
-                descripcion: "Aprende a usar la plataforma Propi para administrar contratos, pagos y\
-                 comunicación con inquilinos de forma digital y eficiente."
-            },
-            {
-                nombre: "Finanzas accesibles para tu negocio con DiiMO Technologies",
-                descripcion: "Descubre cómo DiiMO conecta tu emprendimiento con servicios financieros \
-                inclusivos, sin necesidad de historial bancario tradicional."
-            }
-        ]
-    }
+let informacionPerfil;
+let informacionCursos;
+
+// Esto carga la información del usuario
+async function cargarInformacionUsuario() {
+    // Obtener usuario
+    const userId = await getCurrentUserId();
+    const user = await getUser(userId);
+    // filtrar solo la información útil
+    return {nombre:user.name, trabajo:user.job, idsCursosInscritos:user.cursos};
 };
-const informacionCursos = {
-    data: [
-        {
-            nombre: "Domina tus envíos con Boxful LATAM",
-            descripcion: "Aprende a usar la plataforma de lockers inteligentes y logística de última\
-             milla de Boxful LATAM. Este curso te enseña cómo enviar productos de forma rápida y segura,\
-              ideal para negocios que venden en línea y quieren mejorar su entrega.",
-        },
-        {
-            nombre: "Microcréditos al instante con Fiado App",
-            descripcion: "Este curso te enseña a usar Fiado App, una aplicación salvadoreña que ofrece\
-             microcréditos accesibles para trabajadores independientes. Aprende cómo solicitar un préstamo,\
-              construir tu historial crediticio y mejorar tu liquidez sin trámites complicados."
-        }
-    ]
+
+//Esto carga la información de los cursos disponibles
+async function cargarInformacionCursos() {
+    // obtener cursos
+    let cursos = await obtenerTodosLosCursos();
+    cursos = cursos.data;
+    const cursosDetalles = cursos.map(curso => {
+        return {id: curso.id, nombre:curso.nombre, descripcion: curso.descripcion}
+    });
+    return {data: cursosDetalles,};
 };
 
 // ACTIVAR/DESACTIVAR BOTON
@@ -108,6 +90,14 @@ async function generarQuery(prompt, contexto) {
 
 // Función para interactuar con IA
 const generarMensaje = async function () {
+    if (informacionPerfil == undefined) {
+        informacionPerfil = await cargarInformacionUsuario();
+    };
+    
+    if (informacionCursos == undefined) {
+        informacionCursos = await cargarInformacionCursos();
+    };
+    
     // Obtener contexto
     const contexto = JSON.stringify({
         informacionDelUser: informacionPerfil, 
