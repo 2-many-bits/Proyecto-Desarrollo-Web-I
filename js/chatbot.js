@@ -1,4 +1,4 @@
-import {URL} from "./configuracion_gemini.js";
+import {URL} from "./configuracionGemini.js";
 
 const contenedorChat = document.getElementById("contenidoChat");
 const textareaMensaje = document.getElementById("idTxtMensaje");

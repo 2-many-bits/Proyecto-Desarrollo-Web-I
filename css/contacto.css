@@ -2,7 +2,7 @@
 
 /*ESTILO GENERAL CONTACTO*/
 
-label[name="empresa"], input[type="radio"], section#empresa p{
+label[name="empresa"], input[type="radio"], section.empresa p{
     display: none;
 }
 
@@ -29,6 +29,9 @@ h2{
     font-weight: 400;
     margin: 0 auto;
     padding: 0 20px;
+    z-index: 10;
+    position: relative;
+    bottom: 0.5px;
 }
 form{
     padding: 30px;
@@ -45,7 +48,29 @@ input[type="text"],textarea,input[type="email"], select, select option{
     font-family: montserrat, sans-serif;
     font-size: 1rem;
 }
+select, textarea{
+    border-width: 2px;
+    border-style: inset;
+}
 
+input[type="text"]:focus,textarea:focus,input[type="email"]:focus, select:focus{
+    border-color: var(--verde-lima);
+    outline: none;
+    box-shadow: 0 0 6px var(--gris-fondos);
+}
+
+#contador{
+    position : relative;
+    color: var(--azul-oscuro);
+    background: none;
+    font-size: 0.85rem;
+    pointer-events: none;
+}
+
+.limite-alcanzado{
+    color: red;
+    font-weight: bolder;
+}
 
 
 /*MOVILES*/
@@ -89,7 +114,11 @@ input[type="submit"]{
 textarea, select, select option{
     color: var(--azul-oscuro);
 }
+
+#contador{
+    padding-left: 85%;
     
+}
 }
 /*TABLETS*/
 @media screen and (min-width: 481px) and (max-width: 768px){
@@ -127,6 +156,9 @@ textarea, select, select option{
     color: var(--azul-oscuro);
 }
 
+#contador{
+    padding-left: 88%;
+}
 }
 /*PC*/
 @media screen and (min-width: 769px){
@@ -175,5 +207,8 @@ label{
     color: var(--azul-oscuro);
 }
 
+#contador{
+    padding-left: 90%;
+}
 
 }
