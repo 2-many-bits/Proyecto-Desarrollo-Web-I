@@ -1,3 +1,38 @@
+import {auth, getCurrentUserId, getUser} from './firebase/firebaseConfig.js';
+import { onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js';
+
+//Agregar empresa del usuario al dropdown de empresa
+
+//Obtenemos nombre actual de su empresa
+async function getEmpresa() {
+    const userId = await getCurrentUserId();
+    
+    if (!userId) {
+        console.warn("User not logged in or Auth not ready yet.");
+        return null;
+    }
+
+    const user = await getUser(userId);
+    return user ? user.company : null;
+}
+
+async function agregarEmpresa(empresa) {
+   const empresaInput = document.getElementById("cualEmpresa"); 
+   if (empresaInput) {
+        empresaInput.innerHTML += `<option value="${empresa}">${empresa}</option>`;
+    }
+}
+onAuthStateChanged(auth, async (user) => {
+    if (user) {        
+        const userDoc = await getUser(user.uid);
+        if (userDoc && userDoc.company) {
+            agregarEmpresa(userDoc.company);
+            console.log("Empresa agregada:", userDoc.company);
+        }
+    } else {
+        console.log("Userio no ha ingresado aun.");
+    }
+});
 
 
 
