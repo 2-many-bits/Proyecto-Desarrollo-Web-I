@@ -45,21 +45,23 @@
     <h1>Contacto</h1>
     <h2>Reporta problemas, elabora consultas y danos sugerencias</h2>
     <form method="post" action="../index.html">
-        <section id="nombre">
+        <section>
             <label name="nombre">Nombre: </label>
-        <input type="text" name="nombre" id="nombre" required placeholder="Nombre de usuario">
+        <input type="text" name="nombre" id="nombre" 
+        placeholder="Nombre y Apellido" 
+        pattern="[A-Za-z]{2,}+/s+[A-Za-z]{2,}">
         </section>
-        <section id="correo">
+        <section>
             <label name="correo">Correo: </label>
-        <input type="email" name="correo" id="correo" required placeholder="micorreo@email.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+        <input type="email" name="correo" id="correo" placeholder="micorreo@email.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
         </section>
         
-        <section id="empresa">
+        <section class ="empresa">
             <label name="empresa"> ¿Forma parte de una empresa asociada a nosotros?</label>
         <p><input type="radio" name="empresa" id="si"> Sí</p>
         <p><input type="radio" name="empresa" checked id="no"> No</p>
         </section>
-        <section id="cualEmpresa">
+        <section>
             <label name="cualEmpresa">Empresa: </label>
         <select name="cualEmpresa" id="cualEmpresa">
             <option value="NoTengo">No tengo</option>
@@ -70,13 +72,14 @@
             <option value="Lulu's">Lulu's</option>
         </select>
         </section>
-        <section id="asunto">
+        <section>
              <label name="asunto">Asunto: </label>
-        <input type="text" name="asunto" id="asunto" required>
+        <input type="text" name="asunto" id="asunto">
         </section>
-        <section id="mensaje">
+        <section>
             <label name="mensaje">Mensaje: </label>
-        <textarea name="mensaje" id="mensaje" cols="30" rows="10" required></textarea>
+        <textarea name="mensaje" id="mensaje" cols="30" rows="10" maxlength="700" placeholder="Máximo 700 caracteres"></textarea>
+        <div id="contador">0 / 700</div>
         </section> 
         <input type="submit" value="Enviar">
     </form>
@@ -88,5 +91,7 @@
         <p>Km 12 1/2 Carretera a Comasagua, Santa Tecla, 
             Libertad, El Salvador.</p>
     </footer>
+
+    <script src="../js/contacto.js" type="module"></script>
 </body>
 </html>

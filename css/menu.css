@@ -51,7 +51,7 @@ header nav ul a{
         width: 150px;
         height: 100vh;
         width: 220px;
-        top: 100px;
+        top: 99px;
         left: -500px;
     }
 
@@ -108,7 +108,7 @@ header nav ul a:hover{
 }
 
 #checkMenu:checked ~ .labelBotonMenu #btnOcultar{
-    left: 200px;
+    left: 199px;
 }
 }
 
@@ -135,12 +135,13 @@ header nav ul a:hover{
         width: 150px;
         height: 100vh;
         width: 220px;
-        top: 100px;
+        top: 99px;
         left: -500px;
     }
 
     header nav ul a{
         height: 70px;
+
     }
 
     #inicio{
@@ -192,7 +193,7 @@ header nav ul a:hover{
 }
 
 #checkMenu:checked ~ .labelBotonMenu #btnOcultar{
-    left: 200px;
+    left: 199px;
 }
 
 }
