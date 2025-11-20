@@ -11,8 +11,11 @@ function validarNombre() {
         alert("Por favor, ingrese su nombre y apellido.");
         nombreInput.focus();
         return false;
-    }
-    if (!REGEX_NOMBRE.test(nombre)) {
+    } else if (nombre.split(' ').length < 2) {
+        alert("Por favor, ingrese su nombre y un apellido.");
+        nombreInput.focus();
+        return false;
+    }else if (!REGEX_NOMBRE.test(nombre)) {
         alert("El campo solo debe contener letras y espacios.");
         nombreInput.focus();
         return false;
@@ -29,7 +32,7 @@ function validarCorreo(){
         correoInput.focus();
         return false;
     }
-    if (!REGEX_CORREO.test(correo)) {
+    else if (!REGEX_CORREO.test(correo)) {
         alert("Por favor, ingrese un correo electrónico válido.");
         correoInput.focus();
         return false;
@@ -40,20 +43,24 @@ function validarCorreo(){
 
 //Evento para validar el formulario al enviarlo
 document.querySelector("form").addEventListener("submit", function(event){
-    let mensajeInput = document.getElementById("mensaje");
     let asuntoInput = document.getElementById("asunto");
-    if (!validarNombre()){
-        event.preventDefault();
-    } else if (!validarCorreo()){
+    if (!validarNombre() || !validarCorreo()){
         event.preventDefault();
     } else if (asuntoInput.value.trim() === ""){
         alert("Por favor, ingrese el asunto.");
         asuntoInput.focus();
         event.preventDefault();
-    } else if (mensajeInput.value.trim() === ""){
+    } else if (mensajeInput.value.trim() === "" || mensajeInput.value.length > MAX_CARACTERES){
         alert("Por favor, ingrese un mensaje.");
         mensajeInput.focus();
         event.preventDefault();
+    }
+    else {
+        alert("Formulario enviado con éxito.");
+        event.preventDefault();
+        document.querySelector("form").reset();
+        actualizarContador();
+        nombreInput.focus();
     }
 });
 

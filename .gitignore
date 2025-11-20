@@ -4,3 +4,4 @@ firebaseConfig.js
 
 # Ignorar archivos temporales
 *.log
+css/mainOG.css

@@ -1,6 +1,7 @@
 /*Hoja de estilo para los menus*/
 
 /*ESTILOS GENERALES*/
+
 header img{
     width: 50px;
     height: 50px;
@@ -38,6 +39,13 @@ header nav ul a{
     }
     header, .labelBotonMenu{
         background: none;
+    }
+        header{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0 30px;
+
     }
 
     header nav ul{
@@ -115,6 +123,14 @@ header nav ul a:hover{
 /*TABLETS*/
 @media screen and (min-width: 481px) and (max-width: 768px){
 
+        header{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0 30px;
+
+    }
+    
     header a{
         display: flex;
         justify-content: center;
@@ -200,6 +216,13 @@ header nav ul a:hover{
 
 /*PC*/
 @media screen and (min-width: 769px){
+        header{
+            width:100%;
+        justify-content: space-between;
+        height:15vh;
+        border-bottom: solid 2px var(--gris-fondos);
+        padding: 3%;
+    }
 header label{
     display: none;
 }

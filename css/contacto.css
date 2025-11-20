@@ -67,7 +67,7 @@ input[type="text"]:focus,textarea:focus,input[type="email"]:focus, select:focus{
     pointer-events: none;
 }
 
-.limite-alcanzado{
+#contador.limite-alcanzado{
     color: red;
     font-weight: bolder;
 }
