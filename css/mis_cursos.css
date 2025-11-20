@@ -2,7 +2,7 @@
 @import url("../css/main.css");
 
 /* CUERPO */
-body {
+main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
