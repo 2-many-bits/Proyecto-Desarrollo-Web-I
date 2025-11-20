@@ -1,4 +1,4 @@
-import { registerUser } from "./firebase/firebase_config.js";
+import { registerUser } from "./firebase/firebaseConfig.js";
 const inputTxtName = document.getElementById("idTxtNombre");
 const inputTxtPassword = document.getElementById("idTxtPassword");
 const inputTxtBirthDate = document.getElementById("idTxtFechaNacimiento");
